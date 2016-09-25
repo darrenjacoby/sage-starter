@@ -1,6 +1,6 @@
 # Sass
 
-Sass structure and tooling for faster, cleaner frontend development. Based on [Sage 9](https://github.com/roots/sage) and [Bootstrap 4](https://github.com/twbs/bootstrap).
+Sass structure and tooling for faster frontend development. Based on [Sage 9](https://github.com/roots/sage) and [Bootstrap 4](https://github.com/twbs/bootstrap).
 
 ## Structure
 
@@ -172,4 +172,4 @@ $ git clone https://github.com/darrenjacoby/sass-starter
 
 ## Todo
 
-* Margin bottom (vertical rhythm)
+* Margins (vertical rhythm)
