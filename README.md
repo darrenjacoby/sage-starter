@@ -166,8 +166,8 @@ Assign vendor specific variables.
 Clone into your themes styles directory.
 
 ```shell
-# @ example.com/site/web/app/themes/assets/styles/
-$ git clone https://github.com/darrenjacoby/sass-starter
+# @ example.com/site/web/app/themes/assets/
+$ git clone https://github.com/darrenjacoby/sass-starter styles
 ```
 
 ## Todo
