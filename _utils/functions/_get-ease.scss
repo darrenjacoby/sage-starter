@@ -1,0 +1,16 @@
+/**
+ * Retrieve ease from config/transitions.scss
+ *
+ * @function get-ease($ease)
+ * @params $ease
+ * @requires config/transitions.scss
+ */
+
+@function get-ease($ease)
+{
+  @if map-has-key($easing, $ease) {
+    $ease: map-get($easing, $ease);
+    @return $ease;
+  }
+  @error "#{$ease} not found.";
+}

@@ -1,0 +1,20 @@
+/**
+ * Sections
+ *
+ * Recommended element/s:
+ * article, aside, details, figcaption, figure, footer, header, hgroup, main, mark, menu, nav, section, summary, time
+ */
+// Reset for older browsers
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}

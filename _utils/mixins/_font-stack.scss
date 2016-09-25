@@ -1,0 +1,19 @@
+/**
+ * Loop through a map and output each key/value as CSS property/value
+ *
+ * @mixin parse-font-stack($map)
+ * @params $map
+ * @requires null
+ */
+@mixin parse-font-stack($map)
+{
+  @each $prop, $value in $map {
+    #{$prop}: #{$value};
+  }
+}
+
+@mixin font-stack($font-stack)
+{
+  $map: map-get($font-stacks, $font-stack);
+  @include parse-font-stack($map);
+}

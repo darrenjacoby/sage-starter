@@ -1,0 +1,9 @@
+/**
+ * Media
+ *
+ * Element/s:
+ * img, audio, embed, source, track, video
+ */
+img {
+  @extend .img-fluid;
+}

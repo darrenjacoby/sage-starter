@@ -1,0 +1,23 @@
+/**
+ * Forms
+ *
+ * Element/s:
+ * form, input, textarea, label, fieldset, legend, select, optgroup, option, button, datalist, keygen, output
+ */
+textarea,
+input {
+  outline: none;
+}
+
+form {
+  @extend .form-group;
+}
+
+input,
+textarea {
+  @extend .form-control;
+}
+
+input[type="submit"] {
+  @extend .btn;
+}

@@ -1,0 +1,29 @@
+/**
+ * Headings
+ *
+ * Element/s:
+ * h1, h2, h3, h4, h5, h6, hr
+ */
+h1, .giga {
+  @include font-size(giga);
+}
+
+h2, .mega {
+  @include font-size(mega);
+}
+
+h3, .kilo {
+  @include font-size(kilo);
+}
+
+h4, .hecto {
+  @include font-size(hecto);
+}
+
+h5, .deca {
+  @include font-size(deca);
+}
+
+h6, .base {
+  @include font-size(base);
+}

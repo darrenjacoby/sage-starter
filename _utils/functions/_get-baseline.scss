@@ -1,0 +1,12 @@
+/**
+ * Create a baseline ratio, defaults to 24px (16px/1rem x 1.5)
+ *
+ * @function get-baseline($ratio)
+ * @params $ratio
+ * @requires param $base-ratio from config/grid.scss
+ */
+
+@function get-baseline($ratio)
+{
+  @return ($ratio * $base-ratio) * 1rem;
+}

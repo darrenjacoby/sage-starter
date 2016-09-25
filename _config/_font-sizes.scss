@@ -1,0 +1,47 @@
+/**
+ * Font sizes
+ *
+ * Supports two tier map to include responsive breakpoint config.
+ */
+$font-sizes: (
+  'centi': (
+    'base': (
+      'font-size': 11px
+    )
+  ),
+  'deci': (
+    'base': (
+      'font-size': 12px
+    )
+  ),
+  'base': (
+    'base': (
+      'font-size': 16px
+    )
+  ),
+  'deca': (
+    'base': (
+      'font-size': 21px
+    )
+  ),
+  'hecto': (
+    'base': (
+      'font-size': 27px
+    )
+  ),
+  'kilo': (
+    'base': (
+      'font-size': 36px
+    )
+  ),
+  'mega': (
+    'base': (
+      'font-size': 42px
+    )
+  ),
+  'giga': (
+    'base': (
+      'font-size': 64px
+    )
+  )
+);

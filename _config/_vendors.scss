@@ -1,0 +1,20 @@
+/**
+ * Baseline
+ */
+ $base-ratio: 1.5;
+
+/**
+ * Bootstrap 4
+ */
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
+$grid-columns: 12;
+$grid-gutter-width:	1.875rem;
+$brand-primary: get-color(primary);
+$enable-flex: false;
+$enable-rounded: false;
+//$enable-shadows: false !default;
+//$enable-gradients: false !default;
+//$enable-transitions: false !default;
+//$enable-hover-media-query: false !default;
+//$enable-grid-classes: true !default;

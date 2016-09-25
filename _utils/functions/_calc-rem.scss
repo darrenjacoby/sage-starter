@@ -1,0 +1,12 @@
+/**
+ * Convert Px to REM units
+ *
+ * @mixin get-propvalue($ratio)
+ * @params $map
+ * @requires null
+ */
+
+@function calc-rem($size) {
+  $rem-size: $size / 16px;
+  @return #{$rem-size}rem;
+}

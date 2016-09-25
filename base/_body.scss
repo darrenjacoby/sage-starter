@@ -1,0 +1,8 @@
+/**
+ * Body
+ */
+body {
+  line-height: $base-ratio;
+  @include font-size(base);
+  @include font-stack(primary);
+}
