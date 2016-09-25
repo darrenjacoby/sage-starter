@@ -5,7 +5,6 @@ Sass structure and tooling for faster frontend development. Based on [Sage 9](ht
 ## Structure
 
 ```shell
-├── main.scss
 ├── _config/
 │   ├── _all.scss
 │   ├── _breakpoints.scss
@@ -48,7 +47,9 @@ Sass structure and tooling for faster frontend development. Based on [Sage 9](ht
 │   ├── _pages.scss
 │   ├── _posts.scss
 │   └── _tinymce.scss
-└── views/
+├── views/
+│   └── _template.scss
+└── main.scss
 ```
 
 ## Installation
