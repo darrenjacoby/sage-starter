@@ -63,7 +63,7 @@ $ git clone https://github.com/darrenjacoby/sass-starter styles
 
 ## Usage
 
-Sass maps allow you to declare a reusable style guide.<br>
+Sass maps allow you to declare a reusable style guide for your theme in one location.<br>
 Sass maps are located under `_config/`
 
 ### Breakpoints
