@@ -7,11 +7,11 @@ Sass structure and tooling for faster frontend development. Based on [Sage 9](ht
 ```shell
 ├── _config/
 │   ├── _all.scss
-│   ├── _breakpoints.scss
 │   ├── _colors.scss
 │   ├── _easing.scss
 │   ├── _font-sizes.scss
 │   ├── _font-stacks.scss
+│   ├── _grid.scss
 │   ├── _layers.scss
 │   ├── _speeds.scss
 │   └── _vendors.scss
@@ -23,9 +23,9 @@ Sass structure and tooling for faster frontend development. Based on [Sage 9](ht
 │   └── _mixins.scss
 ├── base/
 │   ├── _all.scss
-│   ├── _body.scss
 │   ├── _forms.scss
 │   ├── _headings.scss
+│   ├── _hr.scss
 │   ├── _links.scss
 │   ├── _lists.scss
 │   ├── _media.scss
@@ -66,17 +66,6 @@ $ git clone https://github.com/darrenjacoby/sass-starter styles
 Sass maps allow you to declare a reusable style guide for your theme in one location.<br>
 Sass maps are located under `_config/`
 
-### Breakpoints
-
-Assign breakpoints and max container width values for the Bootstrap grid.
-
-**Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
-
-**Usage:**
-```sass
-@include media-breakpoint-up(md) {}
-```
-
 ### Colors
 
 Assign colors/branding values.
@@ -104,7 +93,7 @@ transition: color get-speed(slow) get-ease(in);
 ### Font sizes
 
 Assign font size values.
-* Includes support for breakpoints declared in [`_breakpoints.scss`](_config/_breakpoints.scss).
+* Includes support for breakpoints declared in [`_grid.scss`](_config/_grid.scss).
 * Outputs both rem and px values.
 
 **Config:** [`_config/_font-sizes.scss`](_config/_font-sizes.scss)
@@ -139,6 +128,17 @@ Assign font stack values and include @import/@font-face.
 ```sass
 // Use mixin font-stack() with map key as param
 @import font-stack(primary);
+```
+
+### Grid
+
+Assign breakpoints and max container width values for the Bootstrap grid.
+
+**Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
+
+**Usage:**
+```sass
+@include media-breakpoint-up(md) {}
 ```
 
 ### Layers

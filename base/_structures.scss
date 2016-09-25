@@ -2,8 +2,14 @@
  * Sections
  *
  * Recommended element/s:
- * article, aside, details, figcaption, figure, footer, header, hgroup, main, mark, menu, nav, section, summary, time
+ * body, article, aside, details, figcaption, figure, footer, header, hgroup, main, mark, menu, nav, section, summary, time
  */
+body {
+  line-height: $base-ratio;
+  @include font-size(base);
+  @include font-stack(primary);
+}
+
 // Reset for older browsers
 article,
 aside,
