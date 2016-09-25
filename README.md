@@ -51,6 +51,15 @@ Sass structure and tooling for faster frontend development. Based on [Sage 9](ht
 └── views/
 ```
 
+## Installation
+
+Clone into your themes styles directory.
+
+```shell
+# @ example.com/site/web/app/themes/assets/
+$ git clone https://github.com/darrenjacoby/sass-starter styles
+```
+
 ## Usage
 
 Sass maps allow you to declare a reusable style guide.<br>
@@ -160,15 +169,6 @@ transition: color get-speed(slow) get-ease(in);
 Assign vendor specific variables.
 
 **Config:** [`_config/_vendors.scss`](_config/_vendors.scss)
-
-## Installation
-
-Clone into your themes styles directory.
-
-```shell
-# @ example.com/site/web/app/themes/assets/
-$ git clone https://github.com/darrenjacoby/sass-starter styles
-```
 
 ## Todo
 
