@@ -129,17 +129,6 @@ Assign font icon values.
 @include font-icon(right);
 ```
 
-### Grid
-
-Assign breakpoints and max container width values for the Bootstrap grid.
-
-**Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
-
-**Usage:**
-```sass
-@include media-breakpoint-up(md) {}
-```
-
 ### Layers
 
 Assign layers/z-index values.
