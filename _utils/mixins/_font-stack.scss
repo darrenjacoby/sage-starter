@@ -1,19 +1,11 @@
 /**
- * Loop through a map and output each key/value as CSS property/value
+ * Output font stack props from config
  *
- * @mixin parse-font-stack($map)
- * @params $map
- * @requires null
+ * @params $font-stack
+ * @requires functions/get-props
  */
-@mixin parse-font-stack($map)
-{
-  @each $prop, $value in $map {
-    #{$prop}: #{$value};
-  }
-}
-
 @mixin font-stack($font-stack)
 {
   $map: map-get($font-stacks, $font-stack);
-  @include parse-font-stack($map);
+  @include get-props($map);
 }

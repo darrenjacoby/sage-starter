@@ -1,0 +1,12 @@
+/**
+ * Links
+ *
+ * Recommended:
+ * a:link, a:visited, a:hover, a:active
+ */
+a {
+  &, &:active, &:focus, &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}

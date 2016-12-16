@@ -1,9 +1,10 @@
 /**
  * Media
  *
- * Element/s:
+ * Recommended:
  * img, audio, embed, source, track, video
  */
 img {
-  @extend .img-fluid;
+  max-width: 100%;
+  height: auto;
 }

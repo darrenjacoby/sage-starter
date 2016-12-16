@@ -1,11 +1,8 @@
 /**
- * Retrieve color from config/colors.scss
+ * Get color from config/colors.scss
  *
- * @function get-color($color)
  * @params $color
- * @requires config/colors.scss
  */
-
 @function get-color($color)
 {
   @if map-has-key($colors, $color) {

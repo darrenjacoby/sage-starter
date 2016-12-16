@@ -1,0 +1,13 @@
+/**
+ * Paragraphs
+ *
+ * Recommended:
+ * p, pre, code
+ */
+p {
+  margin-bottom: 1em;
+  &:last-child,
+  &:only-of-type {
+    margin: 0;
+  }
+}

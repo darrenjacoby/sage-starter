@@ -1,51 +1,38 @@
 # Sass
 
-Sass structure and tooling for faster frontend development. Based on [Sage 9](https://github.com/roots/sage) and [Bootstrap 4](https://github.com/twbs/bootstrap).
+Sass structure and tooling for faster frontend development.
+
+Bootstrap 4 **not required**, just remove `wp-classes.scss` or replace the media queries and `$spacer` to avoid build errors.
 
 ## Structure
 
 ```shell
 ├── _config/
-│   ├── _all.scss
+│   ├── _config.scss
 │   ├── _colors.scss
-│   ├── _easing.scss
+│   ├── _font-icons.scss
 │   ├── _font-sizes.scss
 │   ├── _font-stacks.scss
 │   ├── _grid.scss
 │   ├── _layers.scss
-│   ├── _speeds.scss
+│   ├── _transitions.scss
 │   └── _vendors.scss
 ├── _utils/
 │   ├── functions/
 │   ├── mixins/
-│   ├── _all.scss
+│   ├── reboot/
 │   ├── _functions.scss
-│   └── _mixins.scss
-├── base/
-│   ├── _all.scss
-│   ├── _forms.scss
-│   ├── _headings.scss
-│   ├── _hr.scss
-│   ├── _links.scss
-│   ├── _lists.scss
-│   ├── _media.scss
-│   ├── _paragraphs.scss
-│   ├── _quotes.scss
-│   ├── _reset.scss
-│   ├── _structures.scss
-│   ├── _tables.scss
-│   └── _text-formatting.scss
+│   ├── _mixins.scss
+│   └── _reboot.scss
 ├── components/
 │   ├── _buttons.scss
-│   ├── _comments.scss
 │   ├── _forms.scss
-│   ├── _grid.scss
 │   └── _wp-classes.scss
 ├── layouts/
 │   ├── _footer.scss
 │   ├── _header.scss
-│   ├── _pages.scss
-│   ├── _posts.scss
+│   ├── _sidebar.scss
+│   ├── _singular.scss
 │   └── _tinymce.scss
 ├── views/
 │   └── _template.scss
@@ -54,7 +41,7 @@ Sass structure and tooling for faster frontend development. Based on [Sage 9](ht
 
 ## Installation
 
-Clone into your themes styles directory.
+Clone into your styles directory.
 
 ```shell
 # @ example.com/site/web/app/themes/assets/
@@ -68,26 +55,25 @@ Sass maps are located under `_config/`
 
 ### Colors
 
-Assign colors/branding values.
+Assign color/branding values.
 
 **Config:** [`_config/_colors.scss`](_config/_colors.scss)
 
-**Usage:**
 ```sass
-// Use function get-color() with map key as param
-color: get-color(primary);
+// Example: adding two tier color/shade
+$colors: (
+  primary: (
+    base: #5000ff,
+    dark: #4600E7,
+  ),
+);
 ```
 
-### Easing
-
-Assign transition easing values.
-
-**Config:** [`_config/_easing.scss`](_config/_easing.scss)
-
 **Usage:**
 ```sass
-// Use function get-ease() with map key as param
-transition: color get-speed(slow) get-ease(in);
+// Use function get-color() with map key as param. Omit shade param to return base.
+color: get-color(primary);
+color: get-color(primary, dark);
 ```
 
 ### Font sizes
@@ -100,11 +86,11 @@ Assign font size values.
 ```sass
 // Example: adding breakpoint support in the config
 $font-sizes: (
-  'deca': (
-    'base': (
+  deca: (
+    base: (
       'font-size': 21px
     ),
-    'lg': (
+    lg: (
       'font-size': 27px
     )
   ),
@@ -120,14 +106,27 @@ $font-sizes: (
 
 ### Font stacks
 
-Assign font stack values and include @import/@font-face.
+Assign font stack values.
 
 **Config:** [`_config/_font-stacks.scss`](_config/_font-stacks.scss)
 
 **Usage:**
 ```sass
 // Use mixin font-stack() with map key as param
-@import font-stack(primary);
+@include font-stack(primary);
+```
+
+### Font icons
+
+Assign font icon values.
+
+**Config:** [`_config/_font-icons.scss`](_config/_font-icons.scss)
+
+**Usage:**
+```sass
+// Use mixin font-icon() with map key as param
+@include font-icon-ready;
+@include font-icon(right);
 ```
 
 ### Grid
@@ -153,15 +152,15 @@ Assign layers/z-index values.
 z-index: get-layer(banner);
 ```
 
-### Speeds
+### Transitions
 
-Assign transition speed values.
+Assign transition easing and speed values.
 
-**Config:** [`_config/_speeds.scss`](_config/_speeds.scss)
+**Config:** [`_config/_transitions.scss`](_config/_transitions.scss)
 
 **Usage:**
 ```sass
-// Use function get-speed() with map key as param
+// Use function get-ease() with map key as param
 transition: color get-speed(slow) get-ease(in);
 ```
 
@@ -170,7 +169,3 @@ transition: color get-speed(slow) get-ease(in);
 Assign vendor specific variables.
 
 **Config:** [`_config/_vendors.scss`](_config/_vendors.scss)
-
-## Todo
-
-* Margins (vertical rhythm)

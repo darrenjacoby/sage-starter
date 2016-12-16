@@ -2,5 +2,8 @@
  * Colors
  */
 $colors: (
-  primary: #5000ff
+  primary: (
+    base: #5000ff,
+    dark: #4600E7,
+  ),
 );

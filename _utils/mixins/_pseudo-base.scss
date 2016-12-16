@@ -1,0 +1,5 @@
+@mixin pseudo-base($block: inline-block)
+{
+	display: $block;
+	content: '';
+}

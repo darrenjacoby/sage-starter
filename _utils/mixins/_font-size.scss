@@ -1,45 +1,18 @@
 /**
- * Loop through a map and output each key/value as CSS property/value, while also converting to REM
+ * Output font size props from config
  *
- * @mixin parse-font-size($map)
- * @params $map
- * @requires null
- * @link https://www.liquidlight.co.uk/blog/article/responsive-typography-in-scss/
+ * @params $font-size
+ * @requires functions/get-props
  */
-@mixin parse-font-size($map)
-{
-  @each $prop, $value in $map {
-    #{$prop}: #{$value};
-    #{$prop}: calc-rem($value);
-  }
-}
-
 @mixin font-size($font-size)
 {
   $map: map-get($font-sizes, $font-size);
   $base: map-get($map, base);
-  @include parse-font-size($base);
+  @include get-props($base);
   $map-breakpoints: map-remove($map, base);
   @each $breakpoint, $attr in $map-breakpoints {
 		@include media-breakpoint-up($breakpoint) {
-      @include parse-font-size($attr);
+      @include get-props($attr);
     }
   }
 }
-
-/**
- * Convert base to xs
- * Replace above mixin with below
- */
-/*
-@mixin font-size($font-size)
-{
-  $map: map-get($font-sizes, $font-size);
-  @each $breakpoint, $attr in $map {
-		@include media-breakpoint-up($breakpoint) {
-      @include parse-font-size($attr);
-
-    }
-  }
-}
-*/

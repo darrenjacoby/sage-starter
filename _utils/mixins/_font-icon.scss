@@ -1,0 +1,23 @@
+/**
+ * Output font icon props from config
+ *
+ * @params $map
+ * @requires functions/get-props
+ */
+@mixin font-icon($font-icon)
+ {
+   $map: map-get($font-icons, $font-icon);
+   @include get-props($map);
+ }
+
+@mixin font-icon-ready {
+  //font-family: ;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

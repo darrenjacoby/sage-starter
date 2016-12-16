@@ -1,0 +1,10 @@
+/**
+ * Get leading ratio
+ * Defaults to 24px (16px/1rem x 1.5)
+ *
+ * @params $ratio
+ */
+@function get-leading($ratio)
+{
+  @return ($ratio * $leading) * 1rem;
+}

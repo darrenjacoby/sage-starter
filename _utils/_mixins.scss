@@ -1,6 +1,11 @@
 @import "mixins/align-vertical";
+@import "mixins/background-base";
 @import "mixins/background-contain";
 @import "mixins/background-cover";
+@import "mixins/font-icon";
 @import "mixins/font-size";
 @import "mixins/font-stack";
 @import "mixins/font-smoothing";
+@import "mixins/pseudo-base";
+@import "mixins/pseudo-cover";
+@import "mixins/remove-leading";

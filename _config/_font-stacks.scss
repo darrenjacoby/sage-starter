@@ -1,13 +1,7 @@
-/**
- * Font stacks
- *
- * Declare @import/@font-face above $font-stacks.
- */
 $font-stacks:
 (
-  'primary': (
-    'font-family': 'Helvetica',
-    'font-style': 'normal',
-    'font-weight': 400
-  )
+  primary: (
+    'font-family': 'sans-serif',
+    'font-weight': 'normal'
+  ),
 );

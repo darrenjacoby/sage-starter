@@ -1,0 +1,12 @@
+/**
+ * Quotations
+ *
+ * Recommended:
+ * blockquote, q, address, cite
+ */
+blockquote, q {
+	quotes: none;
+	&::before, &::after {
+		content: none;
+	}
+}

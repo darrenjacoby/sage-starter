@@ -1,0 +1,34 @@
+/**
+ * Output wrapper for each breakpoint config
+ * Checks if breakpoint exists within $grid-breakpoints
+ *
+ * @params $breakpoint
+ * @requires Bootstrap 4 media-breakpoint-up, $grid-breakpoints
+ */
+@mixin respond-up($breakpoint)
+{
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @include media-breakpoint-up($breakpoint) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-down($breakpoint)
+{
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @include media-breakpoint-down($breakpoint) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
