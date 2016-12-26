@@ -1,6 +1,6 @@
 # Topdown
 
-Lightweight &mdash; 5kb minified &mdash; Sass starter for saner stylesheets.
+Lightweight Sass starter for saner, long-lasting stylesheets.
 
 The architecture is based on ITCSS, which recommends a **top-down low specificity architecture that trends upwards.**
 
