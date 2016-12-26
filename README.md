@@ -237,4 +237,4 @@ Assign vendor specific variables.
 
 ## Mixins
 
-Some basic, common mixins have been included under [`_util/_mixins/`](_util/_mixins/) to help get you started.
+Some basic, common mixins have been included under [`_utils/_mixins/`](_utils/_mixins/) to help get you started.
