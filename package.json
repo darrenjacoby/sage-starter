@@ -1,12 +1,12 @@
 {
-  "name": "sass-starter",
+  "name": "topdown",
   "version": "1.0.0",
   "author": "Darren Jacoby <darren@jacoby.co.za>",
-  "homepage": "https://github.com/soberwp",
+  "homepage": "https://github.com/darrenjacoby",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/soberwp/sass-starter.git"
+    "url": "git://github.com/darrenjacoby/topdown.git"
   },
   "licenses": [
     {
