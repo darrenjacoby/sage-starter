@@ -95,8 +95,8 @@ Assign color/branding values.
 // Example: Declare two tier color/tone config
 $colors: (
   primary: (
-    base: #5000ff,
-    dark: #4600E7,
+    base: rgb(80, 0, 255),
+    light: rgb(246, 242, 255),
   ),
 );
 ```
