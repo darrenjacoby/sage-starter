@@ -2,7 +2,7 @@
 
 Lightweight Sass starter for saner, long-lasting stylesheets.
 
-The architecture is based on ITCSS, which recommends a **top-down low specificity architecture that trends upwards.**
+The architecture is based on [ITCSS](http://itcss.io/), which recommends a **top-down low specificity architecture that trends upwards.**
 
 Place configuration at the top of the project, with the use of Sass maps, and then use functions/mixins to retrieve those values in your components, layouts and views.
 
