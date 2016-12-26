@@ -43,7 +43,6 @@ Run `npm run lint` to lint your files with [stylelint](http://stylelint.io/) usi
 ├── layouts/
 │   ├── _footer.scss
 │   ├── _header.scss
-│   ├── _sidebar.scss
 │   ├── _singular.scss
 │   └── _tinymce.scss
 ├── views/
