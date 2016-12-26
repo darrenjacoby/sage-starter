@@ -63,6 +63,28 @@ $ git clone https://github.com/darrenjacoby/topdown styles
 
 Declare a reusable style guide using Sass maps, located in `_config/`
 
+### Breakpoints
+
+Assign breakpoint values.
+
+**Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
+
+**Usage:**
+```sass
+// For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
+@include respond-up(sm) {
+  // declarations
+};
+@include respond-down(lg) {
+  // declarations
+};
+
+// For custom edge case breakpoint values, you can also pass a rem or px value to the mixin.
+@include respond-up(20rem) {
+  // declarations
+};
+```
+
 ### Colors
 
 Assign color/branding values.
@@ -140,28 +162,6 @@ Assign font stack values.
 // Use mixin font-stack(stack, weight). Omitting the weight param returns the base key.
 @include font-stack(primary);
 @include font-stack(primary, light);
-```
-
-### Grid
-
-Assign Susy config and breakpoint values.
-
-**Config:** [`_config/_grid.scss`](_config/_grid.scss)
-
-**Usage:**
-```sass
-// For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
-@include respond-up(sm) {
-  // declarations
-};
-@include respond-down(lg) {
-  // declarations
-};
-
-// For custom edge case breakpoint values, you can also pass a rem or px value to the mixin.
-@include respond-up(20rem) {
-  // declarations
-};
 ```
 
 ### Layers
