@@ -69,6 +69,18 @@ Assign breakpoint values.
 
 **Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
 
+```sass
+// Example: Defaults are based on Bootstrap 4 breakpoints
+$breakpoints: (
+  xs: 20rem,
+  sm: 36rem,
+  md: 48rem,
+  lg: 62rem,
+  xl: 75rem,
+  xx: 87.5rem,
+) !default;
+```
+
 **Usage:**
 ```sass
 // For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
@@ -119,7 +131,7 @@ Each font-size key requires the following key/values;
   * Sets the min and max font-size.
 * `min-vw` and `max-vw`
   * Set the range for the type to fluidly respond within.
-  * The required params for `min-vw` and `max-vw` are breakpoint keys found in [`_grid.scss`](_config/_grid.scss).
+  * The required params for `min-vw` and `max-vw` are breakpoint keys found in [`_breakpoints.scss`](_config/_breakpoints.scss).
 
 **For fluid type:**
 ```sass
