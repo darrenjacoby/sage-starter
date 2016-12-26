@@ -1,5 +1,6 @@
 /**
  * Output media queries based on breakpoint or custom rem/px value
+ *
  * @params $breakpoint
  */
 @mixin respond-up($breakpoint) {

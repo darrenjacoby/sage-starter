@@ -1,6 +1,7 @@
 /**
  * Convert px to rem units
  * Don't use string interpolation
+ *
  * @params $size
  */
 @function calc-rem($size) {
