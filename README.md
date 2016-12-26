@@ -8,7 +8,7 @@ Place configuration at the top of the project, with the use of Sass maps, and th
 
 [Susy](http://susy.oddbird.net/) is the only dependency, however is not required and can be removed or replaced with your framework of choice.
 
-Files have been linted with [stylelint](http://stylelint.io/) using the [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) present, which can be managed under [package.json](package.json).  Update [.stylelintrc](.stylelintrc) to change linting rules. Run `npm run lint` to lint your stylesheets.
+Run `npm run lint` to lint your files with [stylelint](http://stylelint.io/) using the [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) present, which can be managed under [package.json](package.json).  Update [.stylelintrc](.stylelintrc) to change linting rules.
 
 ## Structure
 
