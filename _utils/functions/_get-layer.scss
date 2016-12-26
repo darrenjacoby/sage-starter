@@ -1,10 +1,9 @@
 /**
  * Get z-index from config/layers.scss
- *
+ * @requires $layers
  * @params $layer
  */
-@function get-layer($layer)
-{
+@function get-layer($layer) {
   @if map-has-key($layers, $layer) {
     $layer: map-get($layers, $layer);
     @return $layer;

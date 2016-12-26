@@ -1,7 +1,8 @@
-$font-stacks:
-(
+$font-stacks: (
   primary: (
-    'font-family': 'sans-serif',
-    'font-weight': 'normal'
+    base: (
+      'font-family': sans-serif,
+      'font-weight': 400,
+    ),
   ),
-);
+) !default;

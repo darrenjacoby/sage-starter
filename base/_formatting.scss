@@ -1,0 +1,30 @@
+/**
+ * Formatting
+ *
+ * Recommended:
+ * em, small, strong, ins, del, mark, p, pre, code, blockquote, q, address, cite
+ */
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 1em;
+
+  &:last-child,
+  &:only-of-type {
+    margin: 0;
+  }
+}
+
+blockquote, q {
+  quotes: none;
+
+  &::before, &::after {
+    content: none;
+  }
+}

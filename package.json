@@ -1,0 +1,27 @@
+{
+  "name": "sass-starter",
+  "version": "1.0.0",
+  "author": "Darren Jacoby <darren@jacoby.co.za>",
+  "homepage": "https://github.com/soberwp",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soberwp/sass-starter.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss"
+  },
+  "devDependencies": {
+    "stylelint": "^7.7.0",
+    "stylelint-config-standard": "^15.0.1"
+  },
+  "dependencies": {
+    "susy": "^2.2.12"
+  }
+}

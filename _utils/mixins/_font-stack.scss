@@ -1,11 +1,10 @@
 /**
  * Output font stack props from config
- *
- * @params $font-stack
  * @requires functions/get-props
+ * @params $font-stack
  */
-@mixin font-stack($font-stack)
-{
+@mixin font-stack($font-stack, $font-weight: base) {
   $map: map-get($font-stacks, $font-stack);
-  @include get-props($map);
+  $font-stack: map-get($map, $font-weight);
+  @include get-props($font-stack);
 }

@@ -1,9 +1,9 @@
 /**
- * Convert px to REM units
- *
+ * Convert px to rem units
+ * Don't use string interpolation
  * @params $size
  */
 @function calc-rem($size) {
-  $rem-size: $size / 16px;
-  @return #{$rem-size}rem;
+  /* stylelint-disable-next-line length-zero-no-unit */
+  @return ($size / 16px) + 0rem;
 }

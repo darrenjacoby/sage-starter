@@ -1,10 +1,9 @@
 /**
- * Get ease from config/easing.scss
- *
+ * Get transition ease from config/transitions.scss
+ * @requires $easing
  * @params $ease
  */
-@function get-ease($ease)
-{
+@function get-ease($ease) {
   @if map-has-key($easing, $ease) {
     $ease: map-get($easing, $ease);
     @return $ease;

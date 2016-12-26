@@ -1,13 +1,12 @@
 /**
  * Get color from config/colors.scss
- *
- * @params $color
+ * @requires $colors
+ * @params $color, $tone
  */
-@function get-color($color)
-{
+@function get-color($color, $tone: 'base') {
   @if map-has-key($colors, $color) {
-    $color: map-get($colors, $color);
-		@return $color;
+    $color: map-get(map-get($colors, $color), $tone);
+    @return $color;
   }
   @error "#{$color} not found.";
 }

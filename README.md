@@ -1,30 +1,42 @@
-# Sass
+# Topdown
 
-Sass structure and tooling for faster frontend development.
+Lightweight &mdash; 5kb minified &mdash; Sass starter for saner stylesheets.
 
-Bootstrap 4 **not required**, just remove `wp-classes.scss` or replace the media queries and `$spacer` to avoid build errors.
+The architecture is based on ITCSS, which recommends a **top-down low specificity architecture that trends upwards.**
+
+Place configuration at the top of the project, with the use of Sass maps, and then use functions/mixins to retrieve those values in your components, layouts and views.
+
+[Susy](http://susy.oddbird.net/) is the only dependency, however is not required and can be removed or replaced with your framework of choice.
+
+Files have been linted with [stylelint](http://stylelint.io/) using the [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) present, which can be managed under [package.json](package.json).  Update [.stylelintrc](.stylelintrc) to change linting rules. Run `npm run lint` to lint your stylesheets.
 
 ## Structure
 
 ```shell
 ├── _config/
-│   ├── _config.scss
 │   ├── _colors.scss
-│   ├── _font-icons.scss
 │   ├── _font-sizes.scss
 │   ├── _font-stacks.scss
 │   ├── _grid.scss
 │   ├── _layers.scss
+│   ├── _spacings.scss
 │   ├── _transitions.scss
 │   └── _vendors.scss
 ├── _utils/
 │   ├── functions/
 │   ├── mixins/
-│   ├── reboot/
 │   ├── _functions.scss
-│   ├── _mixins.scss
-│   └── _reboot.scss
-├── components/
+│   └── _mixins.scss
+├── base/
+│   ├── _blocks.scss
+│   ├── _formatting.scss
+│   ├── _forms.scss
+│   ├── _headings.scss
+│   ├── _links.scss
+│   ├── _lists.scss
+│   ├── _media.scss
+│   └── _tables.scss
+├── comps/
 │   ├── _buttons.scss
 │   ├── _forms.scss
 │   └── _wp-classes.scss
@@ -45,13 +57,12 @@ Clone into your styles directory.
 
 ```shell
 # @ example.com/site/web/app/themes/assets/
-$ git clone https://github.com/darrenjacoby/sass-starter styles
+$ git clone https://github.com/soberwp/topdown styles
 ```
 
-## Usage
+## Configuration & Usage
 
-Sass maps allow you to declare a reusable style guide for your theme in one location.<br>
-Sass maps are located under `_config/`
+Declare a reusable style guide using Sass maps, located in `_config/`
 
 ### Colors
 
@@ -60,7 +71,7 @@ Assign color/branding values.
 **Config:** [`_config/_colors.scss`](_config/_colors.scss)
 
 ```sass
-// Example: adding two tier color/shade
+// Example: Declare two tier color/tone config
 $colors: (
   primary: (
     base: #5000ff,
@@ -71,28 +82,42 @@ $colors: (
 
 **Usage:**
 ```sass
-// Use function get-color() with map key as param. Omit shade param to return base.
+// Use function get-color(color, tone). Omitting the tone param returns the base key.
 color: get-color(primary);
 color: get-color(primary, dark);
 ```
 
 ### Font sizes
 
-Assign font size values.
-* Includes support for breakpoints declared in [`_grid.scss`](_config/_grid.scss).
-* Outputs both rem and px values.
+Assign min and max font size values within a range, based on Mike Riethmuller's [precise control over responsive typography](https://madebymike.com.au/writing/precise-control-responsive-typography/)
 
 **Config:** [`_config/_font-sizes.scss`](_config/_font-sizes.scss)
+
+Each font-size key requires the following key/values;
+* `min-size` and `max-size`
+  * Sets the min and max font-size.
+* `min-vw` and `max-vw`
+  * Set the range for the type to fluidly respond within.
+  * The required params for `min-vw` and `max-vw` are breakpoint keys found in [`_grid.scss`](_config/_grid.scss).
+
+**For fluid type:**
 ```sass
-// Example: adding breakpoint support in the config
 $font-sizes: (
   deca: (
-    base: (
-      'font-size': 21px
-    ),
-    lg: (
-      'font-size': 27px
-    )
+    min-size: 16px,
+    max-size: 18px,
+    min-vw: xs,
+    max-vw: xl,
+  ),
+  // ...
+)
+```
+
+**For fixed type:**
+```sass
+$font-sizes: (
+  deca: (
+    size: 16px,
   ),
   // ...
 )
@@ -100,7 +125,8 @@ $font-sizes: (
 
 **Usage:**
 ```sass
-// Use Sass mixin font-size with map value as param
+// Use mixin font-size(size)
+// Outputs both rem and px values
 @include font-size(deca);
 ```
 
@@ -112,21 +138,31 @@ Assign font stack values.
 
 **Usage:**
 ```sass
-// Use mixin font-stack() with map key as param
+// Use mixin font-stack(stack, weight). Omitting the weight param returns the base key.
 @include font-stack(primary);
+@include font-stack(primary, light);
 ```
 
-### Font icons
+### Grid
 
-Assign font icon values.
+Assign Susy config and breakpoint values.
 
-**Config:** [`_config/_font-icons.scss`](_config/_font-icons.scss)
+**Config:** [`_config/_grid.scss`](_config/_grid.scss)
 
 **Usage:**
 ```sass
-// Use mixin font-icon() with map key as param
-@include font-icon-ready;
-@include font-icon(right);
+// For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
+@include respond-up(sm) {
+  // declarations
+};
+@include respond-down(lg) {
+  // declarations
+};
+
+// For custom edge case breakpoint values, you can also pass a rem or px value to the mixin.
+@include respond-up(20rem) {
+  // declarations
+};
 ```
 
 ### Layers
@@ -137,8 +173,49 @@ Assign layers/z-index values.
 
 **Usage:**
 ```sass
-// Use function get-layer() with map key as param
+// Use function get-layer(layer).
 z-index: get-layer(banner);
+```
+
+### Spacing
+
+[Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid spacing within a specific range.
+
+**Config:** [`_config/_spacing.scss`](_config/_spacing.scss)
+
+The config key/values are the same used for font sizes.
+
+**For fluid spacing:**
+```sass
+$spacings: (
+  deca: (
+    min-size: 2rem,
+    max-size: 4rem,
+    min-vw: sm,
+    max-vw: xl,
+  ),
+  // ...
+)
+```
+
+**For fixed spacing:**
+```sass
+$spacings: (
+  deca: (
+    size: 2rem,
+  ),
+  // ...
+)
+```
+
+**Usage:**
+```sass
+// Use mixin spacing(size, props).
+// The default property is margin-bottom, but the mixin can accept any sizing type property/properties.
+@include spacing(deca);
+// Setting the properties to use;
+@include spacing(deca, padding-top);
+@include spacing(deca, padding-top padding-bottom);
 ```
 
 ### Transitions
@@ -149,7 +226,7 @@ Assign transition easing and speed values.
 
 **Usage:**
 ```sass
-// Use function get-ease() with map key as param
+// Use function get-ease(param) and get-speed(param) with map key as param
 transition: color get-speed(slow) get-ease(in);
 ```
 
@@ -158,3 +235,7 @@ transition: color get-speed(slow) get-ease(in);
 Assign vendor specific variables.
 
 **Config:** [`_config/_vendors.scss`](_config/_vendors.scss)
+
+## Useful Mixins
+
+Some basic mixins have been included under [`_util/_mixins/`](_util/_mixins/) to make some more common tasks faster. More common task mixins will be added in the future.

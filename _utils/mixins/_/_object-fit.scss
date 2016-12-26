@@ -5,8 +5,7 @@
  * @link https://github.com/bfred-it/object-fit-images/blob/master/preprocessors/mixin.scss
  * @params $fit, $position
  */
- @mixin object-fit ($fit: cover, $position: null)
- {
+@mixin object-fit ($fit: cover, $position: null) {
   object-fit: $fit;
   @if $position {
     object-position: $position;
@@ -15,4 +14,4 @@
   @else {
     font-family: 'object-fit: #{$fit}';
   }
- }
+}

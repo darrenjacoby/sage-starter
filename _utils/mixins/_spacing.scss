@@ -1,0 +1,16 @@
+/**
+ * Output fluid spacing calcs from config
+ * @requires mixins/fluid
+ * @params $spacing
+ */
+@mixin spacing($spacing, $props: margin-bottom) {
+  $map: map-get($spacings, $spacing);
+  @if map-has-key($map, size) {
+    @each $prop in $props {
+      #{$prop}: size;
+    }
+  }
+  @else {
+    @include fluid($props, get-bp(map-get($map, min-vw)), get-bp(map-get($map, max-vw)), map-get($map, min-size), map-get($map, max-size));
+  }
+}

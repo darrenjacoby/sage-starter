@@ -1,9 +1,10 @@
 /**
- * Reset
+ * Blocks
  *
- * Ref:
- * http://meyerweb.com/eric/tools/css/reset/
+ * Recommended:
+ * article, aside, details, figcaption, figure, footer, header, hgroup, main, mark, menu, nav, section, summary, time
  */
+// http://meyerweb.com/eric/tools/css/reset/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,9 +18,20 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-	border: 0;
-	font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  font-size: 100%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: $leading;
+  @include font-size(base);
+  @include font-stack(primary);
 }

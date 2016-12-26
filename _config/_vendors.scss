@@ -1,15 +1,11 @@
 /**
- * Bootstrap 4
+ * Susy v2.2.x
  */
-$brand-primary: #5000ff;
-$main-sm-columns: 12;
-$sidebar-sm-columns: 4;
-$grid-columns: 12;
-$grid-gutter-width:	1.875rem;
-$enable-flex: false;
-$enable-rounded: false;
-//$enable-shadows: false !default;
-//$enable-gradients: false !default;
-//$enable-transitions: false !default;
-//$enable-hover-media-query: false !default;
-//$enable-grid-classes: true !default;
+$susy: (
+  columns: 12,
+  container: 87.5rem,
+  global-box-sizing: border-box,
+);
+
+$leading: 1.5 !default;
+$base-line-height: 1.5rem !default;

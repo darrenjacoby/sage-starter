@@ -1,0 +1,12 @@
+@mixin pseudo-base($block: inline-block) {
+  display: $block;
+  content: '';
+}
+
+@mixin pseudo-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

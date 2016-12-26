@@ -1,10 +1,9 @@
 /**
- * Get speed from config/transitions.scss
- *
+ * Get transition speed from config/transitions.scss
+ * @requires $speeds
  * @params $speed
  */
-@function get-speed($speed)
-{
+@function get-speed($speed) {
   @if map-has-key($speeds, $speed) {
     $speed: map-get($speeds, $speed);
     @return $speed;

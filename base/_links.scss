@@ -10,3 +10,9 @@ a {
     color: inherit;
   }
 }
+
+a:not([class]) {
+  &, &:active, &:focus, &:hover {
+    color: get-color(primary);
+  }
+}

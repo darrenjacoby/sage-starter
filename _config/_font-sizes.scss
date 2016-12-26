@@ -1,42 +1,62 @@
 $font-sizes: (
+  milli: (
+    min-size: 10px,
+    max-size: 11px,
+    min-vw: xs,
+    max-vw: xl,
+  ),
   centi: (
-    base: (
-      'font-size': 11px
-    )
+    min-size: 11px,
+    max-size: 12px,
+    min-vw: xs,
+    max-vw: xl,
   ),
   deci: (
-    base: (
-      'font-size': 12px
-    )
+    min-size: 12px,
+    max-size: 14px,
+    min-vw: xs,
+    max-vw: xl,
   ),
   base: (
-    base: (
-      'font-size': 16px
-    )
+    min-size: 14px,
+    max-size: 16px,
+    min-vw: xs,
+    max-vw: xl,
   ),
   deca: (
-    base: (
-      'font-size': 21px
-    )
+    min-size: 16px,
+    max-size: 18px,
+    min-vw: xs,
+    max-vw: xl,
   ),
   hecto: (
-    base: (
-      'font-size': 27px
-    )
+    min-size: 18px,
+    max-size: 24px,
+    min-vw: xs,
+    max-vw: xl,
   ),
   kilo: (
-    base: (
-      'font-size': 36px
-    )
+    min-size: 24px,
+    max-size: 27px,
+    min-vw: xs,
+    max-vw: xl,
   ),
   mega: (
-    base: (
-      'font-size': 42px
-    )
+    min-size: 27px,
+    max-size: 36px,
+    min-vw: xs,
+    max-vw: xl,
   ),
   giga: (
-    base: (
-      'font-size': 64px
-    )
-  )
-);
+    min-size: 36px,
+    max-size: 42px,
+    min-vw: xs,
+    max-vw: xl,
+  ),
+  tera: (
+    min-size: 42px,
+    max-size: 64px,
+    min-vw: xs,
+    max-vw: xl,
+  ),
+) !default;

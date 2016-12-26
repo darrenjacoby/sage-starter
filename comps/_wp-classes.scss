@@ -1,0 +1,46 @@
+/**
+ * WordPress Generated Classes
+ * http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+.alignnone {
+  max-width: 100%;
+  height: auto;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.aligncenter {
+  display: block;
+  height: auto;
+  margin: gutter() auto;
+}
+
+.alignleft,
+.alignright {
+  height: auto;
+  margin-bottom: gutter();
+}
+
+.alignleft {
+  @include respond-up(sm) {
+    float: left;
+  }
+}
+
+.alignright {
+  @include respond-up(sm) {
+    float: right;
+  }
+}
+
+.wp-caption {
+
+}
+
+.wp-caption-text {
+
+}
+
+.screen-reader-text {
+  @include screen-reader;
+}

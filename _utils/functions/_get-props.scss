@@ -1,15 +1,9 @@
 /**
- * Get props from config map
- *
+ * Output props from a config map
  * @params $map
  */
-@mixin get-props($map)
-{
+@mixin get-props($map) {
   @each $prop, $value in $map {
     #{$prop}: #{$value};
-    // if font-size apply calc-rem function
-    @if $prop == 'font-size' {
-      #{$prop}: calc-rem($value);
-    }
   }
 }
