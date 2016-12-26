@@ -57,7 +57,7 @@ Clone into your styles directory.
 
 ```shell
 # @ example.com/site/web/app/themes/assets/
-$ git clone https://github.com/soberwp/topdown styles
+$ git clone https://github.com/darrenjacoby/topdown styles
 ```
 
 ## Configuration & Usage
@@ -236,6 +236,6 @@ Assign vendor specific variables.
 
 **Config:** [`_config/_vendors.scss`](_config/_vendors.scss)
 
-## Useful Mixins
+## Mixins
 
-Some basic mixins have been included under [`_util/_mixins/`](_util/_mixins/) to make some more common tasks faster. More common task mixins will be added in the future.
+Some basic, common mixins have been included under [`_util/_mixins/`](_util/_mixins/) to help get you started.
