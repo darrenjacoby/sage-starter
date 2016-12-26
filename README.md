@@ -14,10 +14,10 @@ Run `npm run lint` to lint your files with [stylelint](http://stylelint.io/) usi
 
 ```shell
 ├── _config/
+│   ├── _breakpoints.scss
 │   ├── _colors.scss
 │   ├── _font-sizes.scss
 │   ├── _font-stacks.scss
-│   ├── _grid.scss
 │   ├── _layers.scss
 │   ├── _spacings.scss
 │   ├── _transitions.scss
