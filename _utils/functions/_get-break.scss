@@ -9,5 +9,5 @@
     $break: map-get($breaks, $break);
     @return $break;
   }
-  @error "#{$break} not found.";
+  @warn "#{$break} not found.";
 }

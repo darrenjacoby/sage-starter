@@ -9,5 +9,5 @@
     $ease: map-get($easing, $ease);
     @return $ease;
   }
-  @error "#{$ease} not found.";
+  @warn "#{$ease} not found.";
 }

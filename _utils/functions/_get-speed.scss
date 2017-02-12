@@ -9,5 +9,5 @@
     $speed: map-get($speeds, $speed);
     @return $speed;
   }
-  @error "#{$speed} not found.";
+  @warn "#{$speed} not found.";
 }

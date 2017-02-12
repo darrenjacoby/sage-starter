@@ -11,5 +11,5 @@
     $spacing: map-get(map-get($spacings, $spacing), $key);
     @return $spacing;
   }
-  @error "#{$spacing} not found.";
+  @warn "#{$spacing} not found.";
 }

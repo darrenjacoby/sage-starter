@@ -9,5 +9,5 @@
     $color: map-get(map-get($colors, $color), $tone);
     @return $color;
   }
-  @error "#{$color} not found.";
+  @warn "#{$color} not found.";
 }

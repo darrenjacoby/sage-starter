@@ -9,5 +9,5 @@
     $layer: map-get($layers, $layer);
     @return $layer;
   }
-  @error "#{$layer} not found.";
+  @warn "#{$layer} not found.";
 }

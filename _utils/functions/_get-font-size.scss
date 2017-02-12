@@ -11,5 +11,5 @@
     $font-size: map-get(map-get($font-sizes, $font-size), $key);
     @return calc-rem($font-size);
   }
-  @error "#{$font-size} not found.";
+  @warn "#{$font-size} not found.";
 }
