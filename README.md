@@ -256,8 +256,6 @@ It sets fluid values based on a min and max value between two breakpoints.
 **Usage:**
 ```sass
 @include fluid($props, $min-value, $max-value, $min-vw, $max-vw);
-
-// example
 @include fluid(margin-bottom, 1rem, 2rem, get-break(xs), get-break(lg));
 ```
 
