@@ -3,27 +3,27 @@
  *
  * @params $breakpoint
  */
-@mixin respond-up($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+@mixin respond-up($break) {
+  @if map-has-key($breaks, $break) {
+    @media (min-width: map-get($breaks, $break)) {
       @content;
     }
   }
   @else {
-    @media (min-width: $breakpoint) {
+    @media (min-width: $break) {
       @content;
     }
   }
 }
 
-@mixin respond-down($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+@mixin respond-down($break) {
+  @if map-has-key($breaks, $break) {
+    @media (max-width: map-get($breaks, $break)) {
       @content;
     }
   }
   @else {
-    @media (max-width: $breakpoint) {
+    @media (max-width: $break) {
       @content;
     }
   }

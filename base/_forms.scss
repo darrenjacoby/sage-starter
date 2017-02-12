@@ -4,6 +4,8 @@
  * Recommended:
  * form, input, textarea, label, fieldset, legend, select, optgroup, option, button, datalist, keygen, output
  */
-textarea, input {
-  outline: none;
+button, input, optgroup, select, textarea {
+  &, &:active, &:focus, &:hover {
+    outline: none;
+  }
 }

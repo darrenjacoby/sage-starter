@@ -1,6 +1,6 @@
 /**
- * Declarations using some of the provided tools
- * Based on Sage 9, remove on production
+ * Based on Sage 9
+ * Remove on production
  */
 .container {
   margin: 0 gutter();
@@ -9,7 +9,5 @@
 }
 
 .page-header {
-  background: get-color(primary, light);
-  @include font-size(tera);
   @include spacing(deca, padding-top padding-bottom);
 }

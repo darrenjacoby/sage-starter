@@ -6,7 +6,7 @@
  * @params $props, $min-vw, $max-vw, $min-value, $max-value
  * @link http://www.sassmeister.com/gist/7f22e44ace49b5124eec
  */
-@mixin fluid($props, $min-vw, $max-vw, $min-value, $max-value) {
+@mixin fluid($props, $min-value, $max-value, $min-vw, $max-vw) {
   /*
   $units: rem, em;
   @if index($units, unit($min-value)) != null {

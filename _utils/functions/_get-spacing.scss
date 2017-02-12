@@ -1,0 +1,15 @@
+/**
+ * Get min-value font-size from config/spacings.scss
+ *
+ * @requires $spacings
+ * @params $spacing
+ */
+@function get-spacing($spacing, $key: min) {
+  $key: "#{$key}-size";
+
+  @if map-has-key($spacings, $spacing) {
+    $spacing: map-get(map-get($spacings, $spacing), $key);
+    @return $spacing;
+  }
+  @error "#{$spacing} not found.";
+}
