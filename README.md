@@ -14,7 +14,7 @@ Run `npm run lint` to lint your files with [stylelint](http://stylelint.io/) usi
 
 ```shell
 ├── _config/
-│   ├── _breakpoints.scss
+│   ├── _breaks.scss
 │   ├── _colors.scss
 │   ├── _font-sizes.scss
 │   ├── _font-stacks.scss
@@ -63,15 +63,15 @@ $ git clone https://github.com/darrenjacoby/topdown styles
 
 Declare a reusable style guide using Sass maps, located in `_config/`
 
-### Breakpoints
+### Breaks
 
 Assign breakpoint values.
 
-**Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
+**Config:** [`_config/_breaks.scss`](_config/_breaks.scss)
 
 ```sass
 // Example: Defaults are based on Bootstrap 4 breakpoints
-$breakpoints: (
+$breaks: (
   xs: 20rem,
   sm: 36rem,
   md: 48rem,
@@ -83,7 +83,7 @@ $breakpoints: (
 
 **Usage:**
 ```sass
-// For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
+// For media queries, use mixins respond-up(break) or respond-down(break).
 @include respond-up(sm) {
   // declarations
 };
@@ -158,9 +158,11 @@ $font-sizes: (
 
 **Usage:**
 ```sass
-// Use mixin font-size(size)
-// Outputs both rem and px values
 @include font-size(deca);
+
+// to get a value from the $font-sizes map;
+font-size: get-font-size(deca) // returns the min-size value for key deca
+font-size: get-font-size(deca, max) // returns the max-size value for key deca
 ```
 
 ### Font stacks
@@ -221,12 +223,16 @@ $spacings: (
 
 **Usage:**
 ```sass
-// Use mixin spacing(size, props).
-// The default property is margin-bottom, but the mixin can accept any sizing type property/properties.
+// default property is margin-bottom.
 @include spacing(deca);
-// Setting the properties to use;
+
+// to set which properties to use;
 @include spacing(deca, padding-top);
 @include spacing(deca, padding-top padding-bottom);
+
+// to get a value from the $spacings map;
+margin-bottom: get-spacing(deca); // returns the min-size value for key deca
+margin-bottom: get-spacing(deca, max); // returns the max-size value for key deca
 ```
 
 ### Transitions
@@ -239,6 +245,20 @@ Assign transition easing and speed values.
 ```sass
 // Use function get-ease(param) and get-speed(param) with map key as param
 transition: color get-speed(slow) get-ease(in);
+```
+
+### Fluid
+
+The fluid mixin can be used directly for better control (no config map required).
+
+It sets fluid values based on a min and max value between two breakpoints. 
+
+**Usage:**
+```sass
+@include fluid($props, $min-value, $max-value, $min-vw, $max-vw);
+
+// example
+@include fluid(margin-bottom, 1rem, 2rem, get-break(xs), get-break(lg));
 ```
 
 ### Vendors
