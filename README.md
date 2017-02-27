@@ -194,7 +194,7 @@ z-index: get-layer(banner);
 
 [Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid spacing within a specific range.
 
-**Config:** [`_config/_spacing.scss`](_config/_spacing.scss)
+**Config:** [`_config/_spacings.scss`](_config/_spacing.scss)
 
 The config key/values are the same used for font sizes.
 
