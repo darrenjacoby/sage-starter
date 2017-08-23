@@ -4,7 +4,7 @@
  * @requires $colors
  * @params $color, $tone
  */
-@function get-color($color, $tone: base) {
+@function get-color($color, $tone: "base") {
   @if map-has-key($colors, $color) {
     $color: map-get(map-get($colors, $color), $tone);
     @return $color;
