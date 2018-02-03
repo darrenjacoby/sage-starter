@@ -1,12 +1,12 @@
 {
-  "name": "topdown",
+  "name": "itcss-starter",
   "version": "1.0.1",
   "author": "Darren Jacoby <darren@jacoby.co.za>",
   "homepage": "https://github.com/darrenjacoby",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/darrenjacoby/topdown.git"
+    "url": "git://github.com/darrenjacoby/itcss-starter.git"
   },
   "licenses": [
     {
