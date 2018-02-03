@@ -1,4 +1,4 @@
-# Topdown
+# itcss-starter
 
 Lightweight Sass starter for saner, longer lasting stylesheets.
 
@@ -56,7 +56,7 @@ Clone into your styles directory.
 
 ```shell
 # @ example.com/site/web/app/themes/assets/
-$ git clone https://github.com/darrenjacoby/topdown styles
+$ git clone https://github.com/darrenjacoby/itcss-starter styles
 ```
 
 ## Configuration & Usage
