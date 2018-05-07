@@ -1,10 +1,10 @@
 # itcss-starter
 
-Lightweight Sass starter for saner, longer lasting stylesheets.
+Sass starter for saner, longer lasting stylesheets.
 
-The architecture is based on [ITCSS](http://itcss.io/), which recommends a **low specificity architecture that trends upwards.**
+The architecture is based on [ITCSS](http://itcss.io/), which recommends a low specificity architecture that trends upwards.
 
-Place configuration at the top of the project with the use of Sass maps, and then use functions/mixins to retrieve those values in your components, layouts and views.
+This can be achieved by placing configuration at the top of the project with the use of Sass maps, and then use functions/mixins to retrieve those values in your components, layouts and views.
 
 Run `npm run lint` to lint your files with [stylelint](http://stylelint.io/) using the [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) present, which can be managed under [package.json](package.json).  Update [.stylelintrc](.stylelintrc) to change rules.
 
