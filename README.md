@@ -215,7 +215,7 @@ margin-bottom: get-spacing(deca); // returns the min-size value for key deca
 margin-bottom: get-spacing(deca, max); // returns the max-size value for key deca
 ```
 
-### Transition Easings
+### Transition easings
 
 Assign transition easing values.
 
@@ -227,7 +227,7 @@ Assign transition easing values.
 transition: color get-trans-speed(slow) get-trans-ease(in);
 ```
 
-### Transition Speeds
+### Transition speeds
 
 Assign transition speed values.
 
@@ -239,7 +239,7 @@ Assign transition speed values.
 transition: color get-trans-speed(slow) get-trans-ease(in);
 ```
 
-### Z-Indexes
+### Z-indexes
 
 Assign z-index values.
 
