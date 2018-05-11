@@ -1,8 +1,8 @@
 # itcss-starter
 
-Sass starter for longer lasting stylesheets.
+Sass starter for longer lasting stylesheets with a single source of truth.
 
-Configuration is placed in Sass maps at the top of the project, functions/mixins are then used to retrieve those values in your comps, layouts and views in order to leverage a single source of truth. 
+Configuration is placed in Sass maps at the top of the project, functions/mixins are then used to retrieve those values in your comps, layouts and views. 
 
 This starter makes no assumptions on frontend frameworks, and only provides the config, utils and folder structure.
 
