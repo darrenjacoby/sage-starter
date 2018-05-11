@@ -1,12 +1,10 @@
 # itcss-starter
 
-Sass starter for saner, longer lasting stylesheets.
+Sass starter for longer lasting stylesheets.
 
-Based on [ITCSS](http://itcss.io/) architecture. 
+Configuration is placed in Sass maps at the top of the project, functions/mixins are then used to retrieve those values in your comps, layouts and views in order to leverage a single source of truth. 
 
-Set configuration at the top of the project with the use of Sass maps, and then use functions/mixins to retrieve those values in your components, layouts and views for a single source of truth. 
-
-This starter makes no assumptions on frontend frameworks, and only provides the structure and config/util mixins and functions.
+This starter makes no assumptions on frontend frameworks, and only provides the config, utils and folder structure.
 
 ## Structure
 
