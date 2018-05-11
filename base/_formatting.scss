@@ -12,10 +12,12 @@ p + p {
   margin-top: 1em;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: none;
   }
 }

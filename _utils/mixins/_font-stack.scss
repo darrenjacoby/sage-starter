@@ -7,5 +7,6 @@
 @mixin font-stack($font-stack, $font-weight: base) {
   $map: map-get($font-stacks, $font-stack);
   $font-stack: map-get($map, $font-weight);
+
   @include get-props($font-stack);
 }

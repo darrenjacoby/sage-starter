@@ -1,17 +1,20 @@
-// Import NPM dependencies
-@import "~normalize.css/normalize";
+// Imports
+// @import "~normalize.css/normalize";
 
+// Config/Utils
 @import "config";
 @import "utils";
-@import "base";
 
-@import "comps/buttons";
-@import "comps/forms";
+// Base
+@import "base/elements";
+@import "base/formatting";
+@import "base/forms";
+@import "base/headings";
+@import "base/links";
+@import "base/lists";
+@import "base/media";
+@import "base/tables";
+
+// Comps
 @import "comps/wp-classes";
-
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/singular";
-@import "layouts/tinymce";
-
-@import "views/template";
+@import "comps/tinymce";

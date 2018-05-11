@@ -1,5 +1,5 @@
 /**
- * Blocks
+ * Elements
  *
  * Recommended:
  * article, aside, details, figcaption, figure, footer, header, hgroup, main, mark, menu, nav, section, summary, time
@@ -10,7 +10,8 @@ html {
 }
 
 body {
+  line-height: $leading;
+
   @include font-size(base);
   @include font-stack(primary);
-  line-height: $leading;
 }

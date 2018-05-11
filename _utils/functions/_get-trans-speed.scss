@@ -1,0 +1,15 @@
+/**
+ * Get transition speed from config/transitions.scss
+ *
+ * @requires $speeds
+ * @params $speed
+ */
+@function get-trans-speed($trans-speed) {
+  @if map-has-key($trans-speeds, $trans-speed) {
+    $trans-speed: map-get($trans-speeds, $trans-speed);
+
+    @return $trans-speed;
+  }
+
+  @warn "#{$trans-speed} not found.";
+}

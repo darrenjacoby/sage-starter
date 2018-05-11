@@ -1,5 +1,0 @@
-@mixin linear-gradient($color1, $color2)
-{
-	background: $color1;
-	background: linear-gradient(to bottom, $color1 0%, $color2 100%);
-}

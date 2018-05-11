@@ -4,31 +4,42 @@
  * Recommended:
  * h1, h2, h3, h4, h5, h6, hr
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   margin: 0;
 }
 
-h1, .tera {
+h1,
+.tera {
   @include font-size(tera);
 }
 
-h2, .giga {
+h2,
+.giga {
   @include font-size(giga);
 }
 
-h3, .mega {
+h3,
+.mega {
   @include font-size(mega);
 }
 
-h4, .kilo {
+h4,
+.kilo {
   @include font-size(kilo);
 }
 
-h5, .hecto {
+h5,
+.hecto {
   @include font-size(hecto);
 }
 
-h6, .deca {
+h6,
+.deca {
   @include font-size(deca);
 }

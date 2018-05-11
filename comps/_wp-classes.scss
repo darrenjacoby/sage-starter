@@ -33,14 +33,10 @@
   }
 }
 
-.wp-caption {
-
-}
-
-.wp-caption-text {
-
-}
-
 .screen-reader-text {
   @include screen-reader;
+}
+
+.page-header {
+  color: get-color(primary);
 }

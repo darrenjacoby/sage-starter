@@ -9,7 +9,9 @@
 
   @if map-has-key($spacings, $spacing) {
     $spacing: map-get(map-get($spacings, $spacing), $key);
+
     @return $spacing;
   }
+
   @warn "#{$spacing} not found.";
 }

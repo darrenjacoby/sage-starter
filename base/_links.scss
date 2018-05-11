@@ -5,7 +5,10 @@
  * a:link, a:visited, a:hover, a:active
  */
 a {
-  &, &:active, &:focus, &:hover {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
     text-decoration: none;
     color: inherit;
     outline: none;
@@ -13,7 +16,10 @@ a {
 }
 
 a:not([class]) {
-  &, &:active, &:focus, &:hover {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
     color: get-color(primary);
   }
 }

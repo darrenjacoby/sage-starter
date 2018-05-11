@@ -2,31 +2,32 @@
 
 Sass starter for saner, longer lasting stylesheets.
 
-The architecture is based on [ITCSS](http://itcss.io/), which recommends a low specificity architecture that trends upwards.
+Based on [ITCSS](http://itcss.io/) architecture. 
 
-This can be achieved by placing configuration at the top of the project with the use of Sass maps, and then use functions/mixins to retrieve those values in your components, layouts and views.
+Set configuration at the top of the project with the use of Sass maps, and then use functions/mixins to retrieve those values in your components, layouts and views for a single source of truth. 
 
-Run `npm run lint` to lint your files with [stylelint](http://stylelint.io/) using the [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) present, which can be managed under [package.json](package.json).  Update [.stylelintrc](.stylelintrc) to change rules.
+This starter makes no assumptions on frontend frameworks, and only provides the structure and config/util mixins and functions.
 
 ## Structure
 
 ```shell
 ├── _config/
-│   ├── _breaks.scss
+│   ├── _breakspoints.scss
 │   ├── _colors.scss
+│   ├── _font-faces.scss
 │   ├── _font-sizes.scss
 │   ├── _font-stacks.scss
-│   ├── _layers.scss
 │   ├── _spacings.scss
-│   ├── _transitions.scss
-│   └── _vendors.scss
+│   ├── _trans-easing.scss
+│   ├── _trans-speeds.scss
+│   └── _z-indexes.scss
 ├── _utils/
 │   ├── functions/
 │   ├── mixins/
 │   ├── _functions.scss
 │   └── _mixins.scss
 ├── base/
-│   ├── _blocks.scss
+│   ├── _elements.scss
 │   ├── _formatting.scss
 │   ├── _forms.scss
 │   ├── _headings.scss
@@ -35,16 +36,10 @@ Run `npm run lint` to lint your files with [stylelint](http://stylelint.io/) usi
 │   ├── _media.scss
 │   └── _tables.scss
 ├── comps/
-│   ├── _buttons.scss
-│   ├── _forms.scss
+│   ├── _tinymce.scss
 │   └── _wp-classes.scss
 ├── layouts/
-│   ├── _footer.scss
-│   ├── _header.scss
-│   ├── _singular.scss
-│   └── _tinymce.scss
 ├── views/
-│   └── _template.scss
 └── main.scss
 ```
 
@@ -61,14 +56,13 @@ $ git clone https://github.com/darrenjacoby/itcss-starter styles
 
 Declare a reusable style guide using Sass maps, located in `_config/`
 
-### Breaks
+### Breakpoints
 
 Assign breakpoint values.
 
-**Config:** [`_config/_breaks.scss`](_config/_breaks.scss)
+**Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
 
 ```sass
-// Example: Defaults are based on Bootstrap 4 breakpoints
 $breaks: (
   xs: 20rem,
   sm: 36rem,
@@ -76,12 +70,12 @@ $breaks: (
   lg: 62rem,
   xl: 75rem,
   xx: 87.5rem,
-) !default;
+);
 ```
 
 **Usage:**
 ```sass
-// For media queries, use mixins respond-up(break) or respond-down(break).
+// For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
 @include respond-up(sm) {
   // declarations
 };
@@ -105,8 +99,8 @@ Assign color/branding values.
 // Example: Declare two tier color/tone config
 $colors: (
   primary: (
-    base: rgb(80, 0, 255),
-    light: rgb(246, 242, 255),
+    base: hsl(157, 85%, 16%),
+    tone1: hsl(144, 19%, 44%),
   ),
 );
 ```
@@ -176,18 +170,6 @@ Assign font stack values.
 @include font-stack(primary, light);
 ```
 
-### Layers
-
-Assign layers/z-index values.
-
-**Config:** [`_config/_layers.scss`](_config/_layers.scss)
-
-**Usage:**
-```sass
-// Use function get-layer(layer).
-z-index: get-layer(banner);
-```
-
 ### Spacing
 
 [Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid spacing within a specific range.
@@ -233,16 +215,40 @@ margin-bottom: get-spacing(deca); // returns the min-size value for key deca
 margin-bottom: get-spacing(deca, max); // returns the max-size value for key deca
 ```
 
-### Transitions
+### Transition Easings
 
-Assign transition easing and speed values.
+Assign transition easing values.
 
-**Config:** [`_config/_transitions.scss`](_config/_transitions.scss)
+**Config:** [`_config/_trans-easings.scss`](_config/_trans-easing.scss)
 
 **Usage:**
 ```sass
-// Use function get-ease(param) and get-speed(param) with map key as param
-transition: color get-speed(slow) get-ease(in);
+// Use function get-trans-ease(param) with map key as param
+transition: color get-trans-speed(slow) get-trans-ease(in);
+```
+
+### Transition Speeds
+
+Assign transition speed values.
+
+**Config:** [`_config/_trans-speeds.scss`](_config/_trans-speeds.scss)
+
+**Usage:**
+```sass
+// Use function get-trans-speed(param) with map key as param
+transition: color get-trans-speed(slow) get-trans-ease(in);
+```
+
+### Z-Indexes
+
+Assign z-index values.
+
+**Config:** [`_config/_z-indexes.scss`](_config/_z-indexes.scss)
+
+**Usage:**
+```sass
+// Use function get-z-index(classname).
+z-index: get-z-index(classname);
 ```
 
 ### Fluid
@@ -257,16 +263,10 @@ It sets fluid values based on a min and max value between two breakpoints.
 @include fluid(margin-bottom, 1rem, 2rem, get-break(xs), get-break(lg));
 ```
 
-### Vendors
-
-Assign vendor specific variables.
-
-**Config:** [`_config/_vendors.scss`](_config/_vendors.scss)
-
 ## Mixins
 
 Some basic, common mixins have been included under [`_utils/_mixins/`](_utils/_mixins/) to help get you started.
 
-## Social
+## End
 
 * Twitter [@withjacoby](https://twitter.com/withjacoby)

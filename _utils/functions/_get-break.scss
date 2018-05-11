@@ -1,13 +1,15 @@
 /**
- * Get speed from config/grid.scss
+ * Get break from config/breakpoints.scss
  *
  * @requires $breakpoints
  * @params $breakpoint
  */
-@function get-break($break) {
-  @if map-has-key($breaks, $break) {
-    $break: map-get($breaks, $break);
-    @return $break;
+@function get-break($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+
+    @return $breakpoint;
   }
-  @warn "#{$break} not found.";
+
+  @warn "#{$breakpoint} not found.";
 }

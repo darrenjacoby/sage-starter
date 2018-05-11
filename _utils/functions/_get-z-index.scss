@@ -1,0 +1,15 @@
+/**
+ * Get z-index from config/z-indexes.scss
+ *
+ * @requires $z-indexes
+ * @params $index
+ */
+@function get-z-index($index) {
+  @if map-has-key($z-indexes, $index) {
+    $index: map-get($z-indexes, $index);
+
+    @return $index;
+  }
+
+  @warn "#{$index} not found.";
+}
