@@ -1,6 +1,6 @@
 {
   "name": "itcss-starter",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "Darren Jacoby <darren@jacoby.co.za>",
   "homepage": "https://github.com/darrenjacoby",
   "private": true,
@@ -17,11 +17,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss"
   },
-  "devDependencies": {
-    "stylelint": "^7.7.0",
-    "stylelint-config-standard": "^16.0.0"
-  },
   "dependencies": {
-    "normalize.css": "^5.0.0"
+    "normalize.css": "^8.0.0"
   }
 }

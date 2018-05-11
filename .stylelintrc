@@ -1,9 +1,0 @@
-{
-  "extends": "stylelint-config-standard",
-  "rules": {
-    "declaration-empty-line-before": never,
-    "selector-list-comma-newline-after": null,
-    "at-rule-empty-line-before": null,
-    "block-no-empty": null
-  }
-}
