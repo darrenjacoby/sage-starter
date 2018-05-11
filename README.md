@@ -63,7 +63,7 @@ Assign breakpoint values.
 **Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
 
 ```sass
-$breaks: (
+$breakpoints: (
   xs: 20rem,
   sm: 36rem,
   md: 48rem,
