@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "Darren Jacoby <darren@jacoby.co.za>",
   "homepage": "https://github.com/darrenjacoby",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/darrenjacoby/itcss-starter.git"
@@ -14,9 +13,6 @@
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
-  "scripts": {
-    "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss"
-  },
   "dependencies": {
     "normalize.css": "^8.0.0"
   }
