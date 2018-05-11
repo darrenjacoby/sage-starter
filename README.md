@@ -75,15 +75,15 @@ $breakpoints: (
 ```sass
 // For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
 @include respond-up(sm) {
-  // declarations
+
 };
 @include respond-down(lg) {
-  // declarations
+
 };
 
 // For custom edge case breakpoint values, you can also pass a rem or px value to the mixin.
 @include respond-up(20rem) {
-  // declarations
+
 };
 ```
 
