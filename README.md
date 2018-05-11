@@ -165,7 +165,7 @@ Assign font stack values.
 ```sass
 // Use mixin font-stack(stack, weight). Omitting the weight param returns the base key.
 @include font-stack(primary);
-@include font-stack(primary, light);
+@include font-stack(primary, tone1);
 ```
 
 ### Spacing
