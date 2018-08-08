@@ -16,7 +16,7 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 │   ├── _font-faces.scss
 │   ├── _font-families.scss
 │   ├── _font-sizes.scss
-│   ├── _spacings.scss
+│   ├── _sizes.scss
 │   └── _z-indexes.scss
 ├── _utils/
 │   ├── functions/
@@ -171,17 +171,17 @@ font-family: get-font-family(primary);
 font-family: get-font-family(primary, tone1);
 ```
 
-### Spacing
+### size
 
-[Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid spacing within a specific range.
+[Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid size within a specific range.
 
-**Config:** [`_config/_spacings.scss`](_config/_spacing.scss)
+**Config:** [`_config/_sizes.scss`](_config/_size.scss)
 
 The config key/values are the same used for font sizes.
 
-**For fluid spacing:**
+**For fluid size:**
 ```sass
-$spacings: (
+$sizes: (
   deca: (
     min-size: 2rem,
     max-size: 4rem,
@@ -192,9 +192,9 @@ $spacings: (
 )
 ```
 
-**For fixed spacing:**
+**For fixed size:**
 ```sass
-$spacings: (
+$sizes: (
   deca: (
     size: 2rem,
   ),
@@ -205,15 +205,15 @@ $spacings: (
 **Usage:**
 ```sass
 // default property is margin-bottom.
-@include spacing(deca);
+@include size(deca);
 
 // to set which properties to use;
-@include spacing(deca, padding-top);
-@include spacing(deca, padding-top padding-bottom);
+@include size(deca, padding-top);
+@include size(deca, padding-top padding-bottom);
 
-// to get a value from the $spacings map;
-margin-bottom: get-spacing(deca); // returns the min-size value for key deca
-margin-bottom: get-spacing(deca, max); // returns the max-size value for key deca
+// to get a value from the $sizes map;
+margin-bottom: get-size(deca); // returns the min-size value for key deca
+margin-bottom: get-size(deca, max); // returns the max-size value for key deca
 ```
 
 ### Durations

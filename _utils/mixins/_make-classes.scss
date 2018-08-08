@@ -41,8 +41,8 @@
   /**
     * Configs using max/min fluid values
     *
-    * @params $spacings
     * @params $font-sizes
+    * @params $sizes
     */
   @if ($config-map == $spacings or $config-map == $font-sizes) {
     // excluding breaks
@@ -74,7 +74,6 @@
     * @params $durations
     * @params $font-faces
     * @params $font-families
-    * @params $transition-speeds
     * @params $z-indexes
     */
   @else {
