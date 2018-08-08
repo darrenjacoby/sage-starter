@@ -1,8 +1,6 @@
-// Imports
-// @import "~normalize.css/normalize";
-
-// Config/Utils
+// Config / Deps / Utils
 @import "config";
+@import "deps";
 @import "utils";
 
 // Base
@@ -14,6 +12,11 @@
 @import "base/lists";
 @import "base/media";
 @import "base/tables";
+
+// Blocks
+@import "blocks/clear";
+@import "blocks/color";
+@import "blocks/font";
 
 // Comps
 @import "comps/wp-classes";

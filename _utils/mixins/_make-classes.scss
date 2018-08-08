@@ -1,0 +1,109 @@
+/**
+ * Output classes from values in a config map
+ *
+ * @requires mixins/fluid
+ * @params $font-size
+ * @params $config-map, $class-prefix, $css-prop
+ */
+@mixin make-classes($config-map, $class-prefix: "", $css-prop: "") {
+  // $css-prop defaults
+  @if ($css-prop == "") {
+    @if ($config-map == $spacings) {
+      $css-prop: "margin-bottom";
+    }
+
+    @if ($config-map == $colors) {
+      $css-prop: "color";
+    }
+
+    @if ($config-map == $font-sizes) {
+      $css-prop: "font-size";
+    }
+
+    @if ($config-map == $font-families) {
+      $css-prop: "font-family";
+    }
+
+    @if ($config-map == $transition-easing) {
+      $css-prop: "transition-timing-function";
+    }
+
+    @if ($config-map == $transition-speed) {
+      $css-prop: "transition-duration";
+    }
+
+    @if ($config-map == $z-indexes) {
+      $css-prop: "z-index";
+    }
+  }
+
+  // $class-prefix defaults
+  @if ($class-prefix == "") {
+    $class-prefix: $css-prop;
+  }
+
+  /**
+    * Configs using max/min fluid values
+    *
+    * @params $spacings
+    * @params $font-sizes
+    */
+  @if ($config-map == $spacings or $config-map == $font-sizes) {
+    // excluding breaks
+    @each $name, $val in $config-map {
+      $map: map-get($config-map, $name);
+
+      .#{$class-prefix}-#{$name} {
+        @include fluid($css-prop, map-get($map, min-size), map-get($map, max-size), get-break(map-get($map, min-vw)), get-break(map-get($map, max-vw)));
+      }
+    }
+
+    // including breaks
+    @each $bp-name, $bp-val in $breakpoints {
+      @each $name, $val in $config-map {
+        $map: map-get($config-map, $name);
+
+        .#{$class-prefix}-#{$name}-#{$bp-name} {
+          @media (min-width: $bp-val) {
+            @include fluid($css-prop, map-get($map, min-size), map-get($map, max-size), get-break(map-get($map, min-vw)), get-break(map-get($map, max-vw)));
+          }
+        }
+      }
+    }
+  }
+
+  /**
+    * Configs using standard maps
+    *
+    * @params $font-faces
+    * @params $font-families
+    * @params $transition-easings
+    * @params $transition-speeds
+    * @params $z-indexes
+    */
+  @else {
+    @each $name, $val in $config-map {
+      .#{$class-prefix}-#{$name} {
+        // two tier map
+        @if type-of($val) == "map" {
+          @each $key, $key-val in $val {
+            @if ($key == base) {
+              #{$css-prop}: $key-val;
+            }
+
+            @else {
+              &-#{$key} {
+                #{$css-prop}: $key-val;
+              }
+            }
+          }
+        }
+
+        // single tier map
+        @else {
+          #{$css-prop}: $val;
+        }
+      }
+    }
+  }
+}

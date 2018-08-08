@@ -10,36 +10,29 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
   margin: 0;
 }
 
-h1,
-.tera {
+h1 {
   @include font-size(tera);
 }
 
-h2,
-.giga {
+h2 {
   @include font-size(giga);
 }
 
-h3,
-.mega {
+h3 {
   @include font-size(mega);
 }
 
-h4,
-.kilo {
+h4 {
   @include font-size(kilo);
 }
 
-h5,
-.hecto {
+h5 {
   @include font-size(hecto);
 }
 
-h6,
-.deca {
+h6 {
   @include font-size(deca);
 }

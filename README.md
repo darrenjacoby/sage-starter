@@ -13,8 +13,8 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 │   ├── _breakspoints.scss
 │   ├── _colors.scss
 │   ├── _font-faces.scss
+│   ├── _font-families.scss
 │   ├── _font-sizes.scss
-│   ├── _font-stacks.scss
 │   ├── _spacings.scss
 │   ├── _trans-easing.scss
 │   ├── _trans-speeds.scss
@@ -33,6 +33,10 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 │   ├── _lists.scss
 │   ├── _media.scss
 │   └── _tables.scss
+├── blocks/
+│   ├── _clear.scss
+│   ├── _color.scss
+│   └── _font.scss
 ├── comps/
 │   ├── _tinymce.scss
 │   └── _wp-classes.scss
@@ -155,17 +159,17 @@ font-size: get-font-size(deca) // returns the min-size value for key deca
 font-size: get-font-size(deca, max) // returns the max-size value for key deca
 ```
 
-### Font stacks
+### Font families
 
-Assign font stack values.
+Assign font family values.
 
-**Config:** [`_config/_font-stacks.scss`](_config/_font-stacks.scss)
+**Config:** [`_config/_font-families.scss`](_config/_font-families.scss)
 
 **Usage:**
 ```sass
-// Use mixin font-stack(stack, weight). Omitting the weight param returns the base key.
-@include font-stack(primary);
-@include font-stack(primary, tone1);
+// to get a value from the $font-families map;
+font-family: get-font-family(primary);
+font-family: get-font-family(primary, tone1);
 ```
 
 ### Spacing
@@ -258,13 +262,29 @@ It sets fluid values based on a min and max value between two breakpoints.
 **Usage:**
 ```sass
 @include fluid($props, $min-value, $max-value, $min-vw, $max-vw);
-@include fluid(margin-bottom, 1rem, 2rem, get-break(xs), get-break(lg));
+
+// Omitting $min-vw, $max-vw gets the default sm/xl values from the breakpoints
+@include fluid($props, $min-value, $max-value);
+
+// For more control you can pass the values
+@include fluid(margin-bottom, 1rem, 2rem, get-break(sm), get-break(xl));
 ```
 
-## Mixins
+## Extra Mixins
 
-Some basic, common mixins have been included under [`_utils/_mixins/`](_utils/_mixins/) to help get you started.
+**Usage:**
+```sass
+// Automate utility classes from config map. Params $config-map, $class-prefix, $css-prop
+@include make-classes($colors, 'bg', 'background-color');
 
-## End
+// Create classes with appended screen sizes from $breakpoints.
+.class-name {
+  @mixin respond-classes {
+    // creates .class-name-sm, .class-name-md, .class-name-lg, etc
+  }
+}
+```
+
+## Social
 
 * Twitter [@withjacoby](https://twitter.com/withjacoby)

@@ -30,3 +30,20 @@
     }
   }
 }
+
+/**
+ * Output classes (append -sm, -md, -lg, -xl, -xx:) for each break in $breakpoints
+ *
+ * @requires $breakpoints
+ */
+@mixin respond-classes {
+  @content;
+
+  @each $bp-name, $bp-val in $breakpoints {
+    @media (min-width: $bp-val) {
+      &-#{$bp-name} {
+        @content;
+      }
+    }
+  }
+}

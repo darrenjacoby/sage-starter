@@ -6,15 +6,25 @@
  * @params $props, $min-vw, $max-vw, $min-value, $max-value
  * @link http://www.sassmeister.com/gist/7f22e44ace49b5124eec
  */
-@mixin fluid($props, $min-value, $max-value, $min-vw, $max-vw) {
-  /*
-  $units: rem, em;
-  @if index($units, unit($min-value)) != null {
+@mixin fluid($props, $min-value, $max-value, $min-vw: get-break(sm), $max-vw: get-break(xl)) {
+  // always calc in rem
+  @if (unit($min-value) == "px") {
+    $min-value: calc-rem($min-value);
+  }
+
+  @if (unit($max-value) == "px") {
+    $max-value: calc-rem($max-value);
+  }
+
+  @if (unit($min-vw) == "px") {
     $min-vw: calc-rem($min-vw);
+  }
+
+  @if (unit($max-vw) == "px") {
     $max-vw: calc-rem($max-vw);
   }
-  */
 
+  // run
   @each $prop in $props {
     #{$prop}: $min-value;
   }

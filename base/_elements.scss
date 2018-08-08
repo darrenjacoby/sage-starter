@@ -11,7 +11,6 @@ html {
 
 body {
   line-height: $leading;
-
-  @include font-size(base);
-  @include font-stack(primary);
+  font-size: 16px;
+  font-family: get-font-family(primary);
 }

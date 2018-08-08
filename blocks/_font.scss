@@ -1,0 +1,24 @@
+/**
+ * Font
+ *
+ * Generated:
+ * .font-primary
+ * .font-deca, font-deca-sm, font-deca-md, font-deca-lg, font-deca-xl, etc
+ */
+
+/*
+// classes from config
+@include make-classes($font-families, 'font');
+*/
+
+/*
+// classes from config, includes appended breakpoints
+@include make-classes($font-sizes, 'font');
+*/
+
+/*
+// custom
+.font-custom-size {
+  @include fluid(font-size, 16px, 100px);
+}
+*/
