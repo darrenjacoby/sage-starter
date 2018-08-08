@@ -1,0 +1,15 @@
+/**
+ * Get duration from config/durations.scss
+ *
+ * @requires $durations
+ * @params $duration
+ */
+@function get-duration($duration) {
+  @if map-has-key($durations, $duration) {
+    $duration: map-get($durations, $duration);
+
+    @return $duration;
+  }
+
+  @warn "#{$duration} not found.";
+}

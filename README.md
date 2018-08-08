@@ -12,12 +12,11 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 ├── _config/
 │   ├── _breakspoints.scss
 │   ├── _colors.scss
+│   ├── _durations.scss
 │   ├── _font-faces.scss
 │   ├── _font-families.scss
 │   ├── _font-sizes.scss
 │   ├── _spacings.scss
-│   ├── _trans-easing.scss
-│   ├── _trans-speeds.scss
 │   └── _z-indexes.scss
 ├── _utils/
 │   ├── functions/
@@ -217,28 +216,16 @@ margin-bottom: get-spacing(deca); // returns the min-size value for key deca
 margin-bottom: get-spacing(deca, max); // returns the max-size value for key deca
 ```
 
-### Transition easings
-
-Assign transition easing values.
-
-**Config:** [`_config/_trans-easings.scss`](_config/_trans-easing.scss)
-
-**Usage:**
-```sass
-// Use function get-trans-ease(param) with map key as param
-transition: color get-trans-speed(slow) get-trans-ease(in);
-```
-
-### Transition speeds
+### Durations
 
 Assign transition speed values.
 
-**Config:** [`_config/_trans-speeds.scss`](_config/_trans-speeds.scss)
+**Config:** [`_config/_durations.scss`](_config/_durations.scss)
 
 **Usage:**
 ```sass
-// Use function get-trans-speed(param) with map key as param
-transition: color get-trans-speed(slow) get-trans-ease(in);
+// Use function get-duration(param) with map key as param
+transition: color get-duration(slow) ease-in;
 ```
 
 ### Z-indexes

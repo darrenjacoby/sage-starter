@@ -16,20 +16,16 @@
       $css-prop: "color";
     }
 
+    @if ($config-map == $durations) {
+      $css-prop: "transition-duration";
+    }
+
     @if ($config-map == $font-sizes) {
       $css-prop: "font-size";
     }
 
     @if ($config-map == $font-families) {
       $css-prop: "font-family";
-    }
-
-    @if ($config-map == $transition-easing) {
-      $css-prop: "transition-timing-function";
-    }
-
-    @if ($config-map == $transition-speed) {
-      $css-prop: "transition-duration";
     }
 
     @if ($config-map == $z-indexes) {
@@ -75,9 +71,9 @@
   /**
     * Configs using standard maps
     *
+    * @params $durations
     * @params $font-faces
     * @params $font-families
-    * @params $transition-easings
     * @params $transition-speeds
     * @params $z-indexes
     */
