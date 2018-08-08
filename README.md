@@ -275,9 +275,10 @@ It sets fluid values based on a min and max value between two breakpoints.
 **Usage:**
 ```sass
 // Automate utility classes from config map. Params $config-map, $class-prefix, $css-prop
-@include make-classes($colors, 'bg', 'background-color');
+@include make-classes($colors, 'color-bg', 'background-color');
+// creates .color-bg-primary, .color-bg-primary-tone1
 
-// Create classes with appended screen sizes from $breakpoints.
+// Create classes with appended screen sizes from $breakpoints
 .class-name {
   @mixin respond-classes {
     // creates .class-name-sm, .class-name-md, .class-name-lg, etc
