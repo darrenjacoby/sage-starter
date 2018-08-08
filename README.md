@@ -10,7 +10,7 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 
 ```shell
 ├── _config/
-│   ├── _breakspoints.scss
+│   ├── _breakpoints.scss
 │   ├── _colors.scss
 │   ├── _durations.scss
 │   ├── _font-faces.scss
