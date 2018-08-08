@@ -1,0 +1,277 @@
+// modified from https://github.com/ryanve/flexboxes
+
+// flex
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-2
+.flex {
+  @include respond-classes {
+    display: flex;
+  }
+}
+
+.inline-flex {
+  @include respond-classes {
+    display: inline-flex;
+  }
+}
+
+// flex-direction
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-3
+.flex-row {
+  @include respond-classes {
+    flex-direction: row;
+  }
+}
+
+.flex-row-reverse {
+  @include respond-classes {
+    flex-direction: row-reverse;
+  }
+}
+
+.flex-column {
+  @include respond-classes {
+    flex-direction: column;
+  }
+}
+
+.flex-column-reverse {
+  @include respond-classes {
+    flex-direction: column-reverse;
+  }
+}
+
+// flex-wrap
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-4
+.flex-wrap {
+  @include respond-classes {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-nowrap {
+  @include respond-classes {
+    flex-wrap: nowrap;
+  }
+}
+
+.flex-wrap-reverse {
+  @include respond-classes {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+// align-items
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-7
+.align-items-start {
+  @include respond-classes {
+    align-items: flex-start;
+  }
+}
+
+.align-items-end {
+  @include respond-classes {
+    align-items: flex-end;
+  }
+}
+
+.align-items-center {
+  @include respond-classes {
+    align-items: center;
+  }
+}
+
+.align-items-baseline {
+  @include respond-classes {
+    align-items: baseline;
+  }
+}
+
+.align-items-stretch {
+  @include respond-classes {
+    align-items: stretch;
+  }
+}
+
+// justify-content
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6
+.justify-content-start {
+  @include respond-classes {
+    justify-content: flex-start;
+  }
+}
+
+.justify-content-end {
+  @include respond-classes {
+    justify-content: flex-end;
+  }
+}
+
+.justify-content-center {
+  @include respond-classes {
+    justify-content: center;
+  }
+}
+
+.justify-content-between {
+  @include respond-classes {
+    justify-content: space-between;
+  }
+}
+
+.justify-content-around {
+  @include respond-classes {
+    justify-content: space-around;
+  }
+}
+
+// align-content
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-8
+.align-content-start {
+  @include respond-classes {
+    align-content: flex-start;
+  }
+}
+
+.align-content-end {
+  @include respond-classes {
+    align-content: flex-end;
+  }
+}
+
+.align-content-center {
+  @include respond-classes {
+    align-content: center;
+  }
+}
+
+.align-content-between {
+  @include respond-classes {
+    align-content: space-between;
+  }
+}
+
+.align-content-around {
+  @include respond-classes {
+    align-content: space-around;
+  }
+}
+
+.align-content-stretch {
+  @include respond-classes {
+    align-content: stretch;
+  }
+}
+
+// order
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-9
+.order-before {
+  @include respond-classes {
+    order: -1;
+  }
+}
+
+.order-after {
+  @include respond-classes {
+    order: 1;
+  }
+}
+
+// align-self
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-14
+.align-self-center {
+  @include respond-classes {
+    align-self: center;
+  }
+}
+
+.align-self-baseline {
+  @include respond-classes {
+    align-self: baseline;
+  }
+}
+
+.align-self-stretch {
+  @include respond-classes {
+    align-self: stretch;
+  }
+}
+
+.align-self-start {
+  @include respond-classes {
+    align-self: flex-start;
+  }
+}
+
+.align-self-end {
+  @include respond-classes {
+    align-self: flex-end;
+  }
+}
+
+// flex
+.flex-initial {
+  @include respond-classes {
+    flex: 0 1 auto;
+  }
+}
+
+.flex-auto {
+  @include respond-classes {
+    flex: 1 1 auto;
+  }
+}
+
+.flex-none {
+  @include respond-classes {
+    flex: 0 0 auto;
+  }
+}
+
+@for $i from 0 through 12 {
+  .flex-#{$i} {
+    @include respond-classes {
+      flex: #{$i};
+    }
+  }
+}
+
+// grow
+@for $i from 0 through 12 {
+  .grow-#{$i} {
+    @include respond-classes {
+      flex-grow: #{$i};
+    }
+  }
+}
+
+// shrink
+@for $i from 0 through 12 {
+  .shrink-#{$i} {
+    @include respond-classes {
+      flex-shrink: #{$i};
+    }
+  }
+}
+
+// basis
+$basis: 0 8.333333333% 16.6666666666% 25% 33.3333333333% 41.6666666666% 50% 58.333333333% 66.6666666666% 75% 83.3333333333% 91.6666666666% 100%;
+
+@for $i from 1 through length($basis) {
+  .basis-#{($i - 1)} {
+    @include respond-classes {
+      flex-basis: nth($basis, $i);
+    }
+  }
+}
+
+.basis-100vw {
+  @include respond-classes {
+    flex-basis: 100vw;
+  }
+}
+
+.basis-100vh {
+  @include respond-classes {
+    flex-basis: 100vh;
+  }
+}

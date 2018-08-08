@@ -63,7 +63,7 @@
       @each $name, $val in $config-map {
         $map: map-get($config-map, $name);
 
-        .#{$class-prefix}-#{$name}-#{$bp-name} {
+        .#{$class-prefix}-#{$name}\:#{$bp-name} {
           @media (min-width: $bp-val) {
             @include fluid($css-prop, map-get($map, min-size), map-get($map, max-size), get-break(map-get($map, min-vw)), get-break(map-get($map, max-vw)));
           }

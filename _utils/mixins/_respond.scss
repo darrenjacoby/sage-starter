@@ -41,7 +41,7 @@
 
   @each $bp-name, $bp-val in $breakpoints {
     @media (min-width: $bp-val) {
-      &-#{$bp-name} {
+      &\:#{$bp-name} {
         @content;
       }
     }

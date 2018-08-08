@@ -281,7 +281,7 @@ It sets fluid values based on a min and max value between two breakpoints.
 // Create classes with appended screen sizes from $breakpoints
 .class-name {
   @mixin respond-classes {
-    // creates .class-name-sm, .class-name-md, .class-name-lg, etc
+    // creates .class-name:sm, .class-name:md, .class-name:lg, etc
   }
 }
 ```
