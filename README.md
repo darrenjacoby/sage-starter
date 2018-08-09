@@ -1,4 +1,4 @@
-# Sage/styles
+# sage/styles
 
 Sass starter for longer lasting stylesheets with a single source of truth.
 
