@@ -40,6 +40,8 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 │   ├── _tinymce.scss
 │   └── _wp-classes.scss
 ├── layouts/
+│   ├── _banner.scss
+│   └── _footer.scss
 ├── views/
 └── main.scss
 ```
