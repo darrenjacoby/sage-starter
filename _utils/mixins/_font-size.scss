@@ -6,11 +6,11 @@
  */
 @mixin font-size($font-size) {
   $map: map-get($font-sizes, $font-size);
-  // is a fixed font size
+  // fixed font size
   @if map-has-key($map, size) {
     font-size: calc-rem(map-get($map, size));
   }
-  // is a fluid font size
+  // fluid font size
   @else {
     @include fluid(font-size, calc-rem(map-get($map, min-size)), calc-rem(map-get($map, max-size)), get-break(map-get($map, min-vw)), get-break(map-get($map, max-vw)));
   }
