@@ -278,7 +278,3 @@ It sets fluid values based on a min and max value between two breakpoints.
   }
 }
 ```
-
-## Social
-
-* Twitter [@withjacoby](https://twitter.com/withjacoby)
