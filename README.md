@@ -159,7 +159,7 @@ font-size: get-font-size(deca, max) // returns the max-size value for key deca
 ```sass
 // get a value from the $font-families map
 font-family: get-font-family(primary);
-font-family: get-font-family(primary, tone1);
+font-family: get-font-family(primary, bold);
 ```
 
 ### Sizes
