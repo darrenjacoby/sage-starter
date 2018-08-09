@@ -105,6 +105,16 @@ color: get-color(primary);
 color: get-color(primary, dark);
 ```
 
+### Durations
+
+**Config:** [`_config/_durations.scss`](_config/_durations.scss)
+
+**Usage:**
+```sass
+// get a value from the $durations map
+transition: color get-duration(slow) ease-in;
+```
+
 ### Font sizes
 
 Fluid min and max font size values within a range, based on Mike Riethmuller's [precise control over responsive typography](https://madebymike.com.au/writing/precise-control-responsive-typography/)
@@ -204,16 +214,6 @@ $sizes: (
 // get a single value from the $sizes map;
 margin-bottom: get-size(deca); // returns the min-size value for key deca
 margin-bottom: get-size(deca, max); // returns the max-size value for key deca
-```
-
-### Durations
-
-**Config:** [`_config/_durations.scss`](_config/_durations.scss)
-
-**Usage:**
-```sass
-// get a value from the $durations map
-transition: color get-duration(slow) ease-in;
 ```
 
 ### Z-indexes
