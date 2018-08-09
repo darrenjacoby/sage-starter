@@ -61,8 +61,6 @@ Declare a reusable style guide using Sass maps, located in `_config/`
 
 ### Breakpoints
 
-Assign breakpoint values.
-
 **Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
 
 ```sass
@@ -88,8 +86,6 @@ $breakpoints: (
 
 ### Colors
 
-Assign color/branding values.
-
 **Config:** [`_config/_colors.scss`](_config/_colors.scss)
 
 ```sass
@@ -111,7 +107,7 @@ color: get-color(primary, dark);
 
 ### Font sizes
 
-Assign min and max font size values within a range, based on Mike Riethmuller's [precise control over responsive typography](https://madebymike.com.au/writing/precise-control-responsive-typography/)
+Fluid min and max font size values within a range, based on Mike Riethmuller's [precise control over responsive typography](https://madebymike.com.au/writing/precise-control-responsive-typography/)
 
 **Config:** [`_config/_font-sizes.scss`](_config/_font-sizes.scss)
 
@@ -156,8 +152,6 @@ font-size: get-font-size(deca, max) // returns the max-size value for key deca
 ```
 
 ### Font families
-
-Assign font family values.
 
 **Config:** [`_config/_font-families.scss`](_config/_font-families.scss)
 
@@ -214,8 +208,6 @@ margin-bottom: get-size(deca, max); // returns the max-size value for key deca
 
 ### Durations
 
-Assign transition speed values.
-
 **Config:** [`_config/_durations.scss`](_config/_durations.scss)
 
 **Usage:**
@@ -225,8 +217,6 @@ transition: color get-duration(slow) ease-in;
 ```
 
 ### Z-indexes
-
-Assign z-index values.
 
 **Config:** [`_config/_z-indexes.scss`](_config/_z-indexes.scss)
 
