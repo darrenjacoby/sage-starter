@@ -243,7 +243,7 @@ It sets fluid values based on a min and max value between two breakpoints.
 @include fluid(margin-bottom, 1rem, 2rem, get-break(sm), get-break(xl));
 ```
 
-## Mixins
+#### Mixins
 
 **Usage:**
 ```sass
