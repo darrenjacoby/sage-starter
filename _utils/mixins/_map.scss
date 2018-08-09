@@ -36,7 +36,7 @@
     * @params $font-sizes
     * @params $sizes
     */
-  @if ($config-map == $spacings or $config-map == $font-sizes) {
+  @if ($config-map == $sizes or $config-map == $font-sizes) {
     $map: map-get($config-map, $name);
 
     @include fluid($css-prop, map-get($map, min-size), map-get($map, max-size), get-break(map-get($map, min-vw)), get-break(map-get($map, max-vw)));
