@@ -109,6 +109,15 @@ color: get-color(primary, dark);
 
 **Config:** [`_config/_durations.scss`](_config/_durations.scss)
 
+```sass
+$durations: (
+  fast: 0.2s,
+  base: 0.4s,
+  slow: 0.6s,
+  slowx: 1s,
+);
+```
+
 **Usage:**
 ```sass
 // get a value from the $durations map
