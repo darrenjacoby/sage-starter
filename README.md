@@ -78,11 +78,11 @@ $breakpoints: (
 
 **Usage:**
 ```sass
-// For media queries, use mixins respond-up(breakpoint) or respond-down(breakpoint).
+// media queries based on $breakpoints
 @include respond-up(sm) {}
 @include respond-down(lg) {}
 
-// For custom edge case breakpoint values, you can also pass a rem or px value to the mixin.
+// custom media query
 @include respond-up(20rem) {]
 ```
 
@@ -93,7 +93,6 @@ Assign color/branding values.
 **Config:** [`_config/_colors.scss`](_config/_colors.scss)
 
 ```sass
-// Example: Declare two tier color/tone config
 $colors: (
   primary: (
     base: hsl(157, 85%, 16%),
@@ -104,7 +103,8 @@ $colors: (
 
 **Usage:**
 ```sass
-// Use function get-color(color, tone). Omitting the tone param returns the base key.
+// function get-color(color, tone). 
+// excluding the tone param returns the base key
 color: get-color(primary);
 color: get-color(primary, dark);
 ```
@@ -147,9 +147,10 @@ $font-sizes: (
 
 **Usage:**
 ```sass
+// get fluid font sizes from $font-sizes
 @include font-size(deca);
 
-// to get a value from the $font-sizes map;
+// get a single value from the $font-sizes
 font-size: get-font-size(deca) // returns the min-size value for key deca
 font-size: get-font-size(deca, max) // returns the max-size value for key deca
 ```
@@ -162,7 +163,7 @@ Assign font family values.
 
 **Usage:**
 ```sass
-// to get a value from the $font-families map;
+// get a value from the $font-families map
 font-family: get-font-family(primary);
 font-family: get-font-family(primary, tone1);
 ```
@@ -200,14 +201,13 @@ $sizes: (
 
 **Usage:**
 ```sass
-// default property is margin-bottom.
+// default prop is margin-bottom
 @include size(deca);
 
-// to set which properties to use;
-@include size(deca, padding-top);
+// use a custom prop or props
 @include size(deca, padding-top padding-bottom);
 
-// to get a value from the $sizes map;
+// get a single value from the $sizes map;
 margin-bottom: get-size(deca); // returns the min-size value for key deca
 margin-bottom: get-size(deca, max); // returns the max-size value for key deca
 ```
@@ -220,7 +220,7 @@ Assign transition speed values.
 
 **Usage:**
 ```sass
-// Use function get-duration(param) with map key as param
+// get a value from the $durations map
 transition: color get-duration(slow) ease-in;
 ```
 
@@ -232,7 +232,7 @@ Assign z-index values.
 
 **Usage:**
 ```sass
-// Use function get-z-index(classname).
+// get a value from the $z-indexes map
 z-index: get-z-index(classname);
 ```
 
@@ -246,10 +246,10 @@ It sets fluid values based on a min and max value between two breakpoints.
 ```sass
 @include fluid($props, $min-value, $max-value, $min-vw, $max-vw);
 
-// Omitting $min-vw, $max-vw gets the default sm/xl values from the breakpoints
+// excluding $min-vw, $max-vw gets the default sm/xl values from $breakpoints
 @include fluid($props, $min-value, $max-value);
 
-// For more control you can pass the values
+// for more control you can pass the values
 @include fluid(margin-bottom, 1rem, 2rem, get-break(sm), get-break(xl));
 ```
 
