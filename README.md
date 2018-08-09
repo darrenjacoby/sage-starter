@@ -171,7 +171,7 @@ font-family: get-font-family(primary);
 font-family: get-font-family(primary, tone1);
 ```
 
-### size
+### Sizes
 
 [Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid size within a specific range.
 
@@ -257,18 +257,24 @@ It sets fluid values based on a min and max value between two breakpoints.
 @include fluid(margin-bottom, 1rem, 2rem, get-break(sm), get-break(xl));
 ```
 
-## Extra Mixins
+## Mixins
 
 **Usage:**
 ```sass
-// Automate utility classes from config map. Params $config-map, $class-prefix, $css-prop
-@include make-classes($colors, 'color-bg', 'background-color');
-// creates .color-bg-primary, .color-bg-primary-tone1
+// Append map keys and values to class
+.font {
+  @include map($font-families, 'font-family');
+  // .font-primary
 
-// Create classes with appended screen sizes from $breakpoints
+  @include map-respond-classes($font-sizes, 'font-size');
+  // .font-deca, font-deca:md, font-deca:lg, etc
+}
+
+
+// Append classes with screen sizes from $breakpoints
 .class-name {
   @mixin respond-classes {
-    // creates .class-name:sm, .class-name:md, .class-name:lg, etc
+    // .class-name, .class-name:md, .class-name:lg, etc
   }
 }
 ```

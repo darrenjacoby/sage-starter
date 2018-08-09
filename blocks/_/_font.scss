@@ -7,18 +7,9 @@
  */
 
 /*
-// classes from config
-@include make-classes($font-families, 'font');
-*/
-
-/*
-// classes from config, includes appended breakpoints
-@include make-classes($font-sizes, 'font');
-*/
-
-/*
 // custom
-.font-custom-size {
-  @include fluid(font-size, 16px, 100px);
+.font {
+  @include map($font-families, 'font-family');
+  @include map-respond-classes($font-sizes, 'font-size');
 }
 */

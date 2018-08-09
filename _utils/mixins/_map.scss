@@ -1,0 +1,75 @@
+/**
+ * Output classes from values in a config map
+ *
+ * @requires mixins/fluid
+ * @requires mixins/respond-classes
+ *
+ * @params $font-size
+ * @params $config-map, $class-prefix, $css-prop
+ */
+
+// Map
+@mixin map($config-map, $css-prop) {
+  @each $name, $val in $config-map {
+    &-#{$name} {
+      @include get-map($config-map, $css-prop, $name, $val);
+    }
+  }
+}
+
+// Map Respond Classes
+@mixin map-respond-classes($config-map, $css-prop) {
+  @each $name, $val in $config-map {
+    &-#{$name} {
+      @include respond-classes() {
+        @include get-map($config-map, $css-prop, $name, $val);
+      }
+    }
+  }
+}
+
+// Get Map
+@mixin get-map($config-map, $css-prop, $name, $val) {
+  /**
+    * Configs using max/min fluid values
+    *
+    * @params $font-sizes
+    * @params $sizes
+    */
+  @if ($config-map == $spacings or $config-map == $font-sizes) {
+    $map: map-get($config-map, $name);
+
+    @include fluid($css-prop, map-get($map, min-size), map-get($map, max-size), get-break(map-get($map, min-vw)), get-break(map-get($map, max-vw)));
+  }
+
+  /**
+    * Configs using standard maps
+    *
+    * @params $colors
+    * @params $durations
+    * @params $font-families
+    * @params $font-sizes
+    * @params $z-indexes
+    */
+  @else {
+    // two tier map
+    @if type-of($val) == "map" {
+      @each $key, $key-val in $val {
+        @if ($key == base) {
+          #{$css-prop}: $key-val;
+        }
+
+        @else {
+          &-#{$key} {
+            #{$css-prop}: $key-val;
+          }
+        }
+      }
+    }
+
+    // single tier map
+    @else {
+      #{$css-prop}: $val;
+    }
+  }
+}

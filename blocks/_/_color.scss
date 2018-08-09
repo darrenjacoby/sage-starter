@@ -3,11 +3,16 @@
  *
  * Generated:
  * .color-primary, .color-secondary
- * .bg-primary, .bg-secondary
+ * .color-bg-primary, .color-bg-secondary
  */
 
 /*
 // classes from config
-@include make-classes($colors);
-@include make-classes($colors, 'bg', 'background-color');
+.color {
+  @include map($colors, 'color');
+}
+
+.color-bg {
+  @include map($colors, 'background-color');
+}
 */
