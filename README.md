@@ -237,10 +237,10 @@ It sets fluid values based on a min and max value between two breakpoints.
 @include fluid($props, $min-value, $max-value, $min-vw, $max-vw);
 
 // excluding $min-vw, $max-vw gets the default sm/xl values from $breakpoints
-@include fluid($props, $min-value, $max-value);
+@include fluid(margin-bottom, 1rem, 10rem);
 
 // for more control you can pass the values
-@include fluid(margin-bottom, 1rem, 2rem, get-break(sm), get-break(xl));
+@include fluid(margin-bottom, 1rem, 10rem, get-break(lg), get-break(xx));
 ```
 
 ### Mixins
