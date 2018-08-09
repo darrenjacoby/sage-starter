@@ -52,7 +52,7 @@ Clone into your styles directory.
 
 ```shell
 # @ example.com/site/web/app/themes/assets/
-$ git clone https://github.com/darrenjacoby/itcss-starter styles
+$ git clone https://github.com/darrenjacoby/sage-styles styles
 ```
 
 ## Configuration & Usage
