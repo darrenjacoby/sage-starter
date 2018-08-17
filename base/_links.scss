@@ -5,6 +5,8 @@
  * a:link, a:visited, a:hover, a:active
  */
 a {
+  transition: color get-duration(fast);
+
   &,
   &:active,
   &:focus,

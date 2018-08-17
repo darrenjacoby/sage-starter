@@ -1,0 +1,15 @@
+.banner-nav a {
+  // props
+}
+
+.banner-nav > li {
+  // padding: 0 1rem;
+
+  &:first-of-type {
+    // padding-left: 0;
+  }
+
+  &:last-of-type {
+    // padding-right: 0;
+  }
+}

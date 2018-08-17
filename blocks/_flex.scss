@@ -227,7 +227,8 @@
   }
 }
 
-@for $i from 0 through 12 {
+// requires $grid-cols, $grid-basis
+@for $i from 0 through $grid-cols {
   .flex-#{$i} {
     @include respond-classes {
       flex: #{$i};
@@ -236,7 +237,7 @@
 }
 
 // grow
-@for $i from 0 through 12 {
+@for $i from 0 through $grid-cols {
   .grow-#{$i} {
     @include respond-classes {
       flex-grow: #{$i};
@@ -245,7 +246,7 @@
 }
 
 // shrink
-@for $i from 0 through 12 {
+@for $i from 0 through $grid-cols {
   .shrink-#{$i} {
     @include respond-classes {
       flex-shrink: #{$i};
@@ -254,24 +255,44 @@
 }
 
 // basis alias col
-$basis: 0 8.333333333% 16.6666666666% 25% 33.3333333333% 41.6666666666% 50% 58.333333333% 66.6666666666% 75% 83.3333333333% 91.6666666666% 100%;
-
-@for $i from 1 through length($basis) {
-  .col-#{($i - 1)} {
+@for $i from 0 through $grid-cols {
+  .basis-#{$i} {
     @include respond-classes {
-      flex-basis: nth($basis, $i);
+      position: relative;
+      flex-basis: percentage($i/$grid-cols);
     }
   }
 }
 
-.col-100vw {
+.basis-100vw {
   @include respond-classes {
     flex-basis: 100vw;
   }
 }
 
-.col-100vh {
+.basis-100vh {
   @include respond-classes {
     flex-basis: 100vh;
+  }
+}
+
+// Bootstrap
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($grid-gutter / -2);
+  margin-left: ($grid-gutter / -2);
+}
+
+@for $i from 0 through $grid-cols {
+  .col-#{$i} {
+    @include respond-classes {
+      position: relative;
+      padding-right: ($grid-gutter / 2);
+      padding-left: ($grid-gutter / 2);
+      min-height: 1px;
+      flex: 0 0 percentage($i/$grid-cols);
+      max-width: percentage($i/$grid-cols);
+    }
   }
 }

@@ -4,13 +4,13 @@
 }
 
 @mixin background-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-
-  @include background-base;
 }
 
 @mixin background-contain {
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: contain;
-
-  @include background-base;
 }

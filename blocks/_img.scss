@@ -1,0 +1,19 @@
+.img-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  // https://github.com/bfred-it/object-fit-images/
+  // font-family: 'object-fit: cover';
+}
+
+.img-contain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: contain;
+  // https://github.com/bfred-it/object-fit-images/
+  // font-family: 'object-fit: contain';
+}

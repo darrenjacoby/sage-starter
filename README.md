@@ -16,6 +16,7 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 │   ├── _font-faces.scss
 │   ├── _font-families.scss
 │   ├── _font-sizes.scss
+│   ├── _grid.scss
 │   ├── _sizes.scss
 │   └── _z-indexes.scss
 ├── _utils/

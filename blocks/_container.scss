@@ -1,5 +1,27 @@
 .container {
+  position: relative;
   max-width: get-break(xl);
   margin-left: auto;
   margin-right: auto;
+}
+
+.container-esc {
+  position: relative;
+
+  @include respond-up(xl) {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+.container-esc-left {
+  @include respond-up(xl) {
+    margin-left: calc(50% - 50vw);
+  }
+}
+
+.container-esc-right {
+  @include respond-up(xl) {
+    margin-right: calc(50% - 50vw);
+  }
 }
