@@ -36,7 +36,8 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 ├── blocks/
 │   ├── _clear.scss
 │   ├── _container.scss
-│   └── _flex.scss
+│   ├── _flex.scss
+│   └── _img.scss
 ├── comps/
 │   ├── _tinymce.scss
 │   └── _wp-classes.scss
