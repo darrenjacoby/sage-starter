@@ -1,3 +1,9 @@
+.img-container {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
 .img-cover {
   position: absolute;
   width: 100%;
@@ -15,3 +21,18 @@
   // https://github.com/bfred-it/object-fit-images/
   // font-family: 'object-fit: contain';
 }
+
+/*
+// for placeholder images loaded via js
+img.js-load {
+  filter: blur(20px);
+  transform: scale(1.1);
+  transition: filter 1s, opacity 1s;
+  opacity: 1;
+}
+
+img.js-loaded {
+  filter: blur(0);
+  opacity: 1;
+}
+*/

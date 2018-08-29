@@ -1,10 +1,17 @@
 /**
  * Media
  *
- * Recommended:
+ * @recommended
  * img, audio, embed, source, track, video
  */
 img {
   max-width: 100%;
   height: auto;
+}
+
+// Chrome shows 1px border for images without src= which affects lazyloading
+// https://stackoverflow.com/questions/6013071/removing-the-image-border-in-chrome-ie9
+img[src=''],
+img:not([src]) {
+  opacity: 0;
 }

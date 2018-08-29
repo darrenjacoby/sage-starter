@@ -6,7 +6,7 @@
  * @params $props, $min-vw, $max-vw, $min-value, $max-value
  * @link http://www.sassmeister.com/gist/7f22e44ace49b5124eec
  */
-@mixin fluid($props, $min-value, $max-value, $min-vw: get-break(sm), $max-vw: get-break(xl)) {
+@mixin fluid($props, $min-value, $max-value, $min-vw: get-break(sm), $max-vw: get-break(xx)) {
   // always calc in rem
   @if (unit($min-value) == "px") {
     $min-value: calc-rem($min-value);

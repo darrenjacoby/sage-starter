@@ -3,7 +3,7 @@
  *
  * @params $breakpoint
  */
-@mixin respond-up($breakpoint) {
+@mixin mq($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
@@ -17,7 +17,7 @@
   }
 }
 
-@mixin respond-down($breakpoint) {
+@mixin mq-down($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (max-width: map-get($breakpoints, $breakpoint)) {
       @content;
@@ -36,7 +36,7 @@
  *
  * @requires $breakpoints
  */
-@mixin respond-classes {
+@mixin mq-classes {
   @content;
 
   @each $bp-name, $bp-val in $breakpoints {

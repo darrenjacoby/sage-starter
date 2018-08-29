@@ -22,13 +22,13 @@
 }
 
 .alignleft {
-  @include respond-up(sm) {
+  @include mq(sm) {
     float: left;
   }
 }
 
 .alignright {
-  @include respond-up(sm) {
+  @include mq(sm) {
     float: right;
   }
 }

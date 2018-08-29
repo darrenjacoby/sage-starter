@@ -3,296 +3,246 @@
 // flex
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-2
 .flex {
-  @include respond-classes {
-    display: flex;
-  }
+  display: flex;
 }
 
 .inline-flex {
-  @include respond-classes {
-    display: inline-flex;
-  }
+  display: inline-flex;
 }
 
 // flex-direction
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-3
 .flex-row {
-  @include respond-classes {
-    flex-direction: row;
-  }
+  flex-direction: row;
 }
 
 .flex-row-reverse {
-  @include respond-classes {
-    flex-direction: row-reverse;
-  }
+  flex-direction: row-reverse;
 }
 
 .flex-column {
-  @include respond-classes {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
 .flex-column-reverse {
-  @include respond-classes {
-    flex-direction: column-reverse;
-  }
+  flex-direction: column-reverse;
 }
 
 // flex-wrap
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-4
 .flex-wrap {
-  @include respond-classes {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }
 
 .flex-nowrap {
-  @include respond-classes {
-    flex-wrap: nowrap;
-  }
+  flex-wrap: nowrap;
 }
 
 .flex-wrap-reverse {
-  @include respond-classes {
-    flex-wrap: wrap-reverse;
-  }
+  flex-wrap: wrap-reverse;
 }
 
 // align-items
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-7
 .align-items-start {
-  @include respond-classes {
-    align-items: flex-start;
-  }
+  align-items: flex-start;
 }
 
 .align-items-end {
-  @include respond-classes {
-    align-items: flex-end;
-  }
+  align-items: flex-end;
 }
 
 .align-items-center {
-  @include respond-classes {
-    align-items: center;
-  }
+  align-items: center;
 }
 
 .align-items-baseline {
-  @include respond-classes {
-    align-items: baseline;
-  }
+  align-items: baseline;
 }
 
 .align-items-stretch {
-  @include respond-classes {
-    align-items: stretch;
-  }
+  align-items: stretch;
 }
 
 // justify-content
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6
 .justify-content-start {
-  @include respond-classes {
-    justify-content: flex-start;
-  }
+  justify-content: flex-start;
 }
 
 .justify-content-end {
-  @include respond-classes {
-    justify-content: flex-end;
-  }
+  justify-content: flex-end;
 }
 
 .justify-content-center {
-  @include respond-classes {
-    justify-content: center;
-  }
+  justify-content: center;
 }
 
 .justify-content-between {
-  @include respond-classes {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 }
 
 .justify-content-around {
-  @include respond-classes {
-    justify-content: space-around;
-  }
+  justify-content: space-around;
 }
 
 // align-content
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-8
 .align-content-start {
-  @include respond-classes {
-    align-content: flex-start;
-  }
+  align-content: flex-start;
 }
 
 .align-content-end {
-  @include respond-classes {
-    align-content: flex-end;
-  }
+  align-content: flex-end;
 }
 
 .align-content-center {
-  @include respond-classes {
-    align-content: center;
-  }
+  align-content: center;
 }
 
 .align-content-between {
-  @include respond-classes {
-    align-content: space-between;
-  }
+  align-content: space-between;
 }
 
 .align-content-around {
-  @include respond-classes {
-    align-content: space-around;
-  }
+  align-content: space-around;
 }
 
 .align-content-stretch {
-  @include respond-classes {
-    align-content: stretch;
-  }
+  align-content: stretch;
 }
 
 // order
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-9
 .order-before {
-  @include respond-classes {
-    order: -1;
-  }
+  order: -1;
 }
 
 .order-after {
-  @include respond-classes {
-    order: 1;
+  order: 1;
+}
+
+@each $bp in map-keys($breakpoints) {
+  @include respond-up($bp) {
+    .order-after\:#{$bp} {
+      order: 1;
+    }
+
+    .order-before\:#{$bp} {
+      order: -1;
+    }
   }
 }
 
 // align-self
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-14
 .align-self-center {
-  @include respond-classes {
-    align-self: center;
-  }
+  align-self: center;
 }
 
 .align-self-baseline {
-  @include respond-classes {
-    align-self: baseline;
-  }
+  align-self: baseline;
 }
 
 .align-self-stretch {
-  @include respond-classes {
-    align-self: stretch;
-  }
+  align-self: stretch;
 }
 
 .align-self-start {
-  @include respond-classes {
-    align-self: flex-start;
-  }
+  align-self: flex-start;
 }
 
 .align-self-end {
-  @include respond-classes {
-    align-self: flex-end;
-  }
+  align-self: flex-end;
 }
 
 // flex
 .flex-initial {
-  @include respond-classes {
-    flex: 0 1 auto;
-  }
+  flex: 0 1 auto;
 }
 
 .flex-auto {
-  @include respond-classes {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
 }
 
 .flex-none {
-  @include respond-classes {
-    flex: 0 0 auto;
-  }
+  flex: 0 0 auto;
 }
 
 // requires $grid-cols, $grid-basis
 @for $i from 0 through $grid-cols {
   .flex-#{$i} {
-    @include respond-classes {
-      flex: #{$i};
-    }
+    flex: #{$i};
   }
 }
 
 // grow
 @for $i from 0 through $grid-cols {
   .grow-#{$i} {
-    @include respond-classes {
-      flex-grow: #{$i};
-    }
+    flex-grow: #{$i};
   }
 }
 
 // shrink
 @for $i from 0 through $grid-cols {
   .shrink-#{$i} {
-    @include respond-classes {
-      flex-shrink: #{$i};
-    }
+    flex-shrink: #{$i};
   }
+}
+
+// basis
+// renamed to col for faster typing
+.col-100vw {
+  flex-basis: 100vw;
+}
+
+.col-100vh {
+  flex-basis: 100vh;
 }
 
 // basis alias col
 @for $i from 0 through $grid-cols {
-  .basis-#{$i} {
-    @include respond-classes {
-      position: relative;
-      flex-basis: percentage($i/$grid-cols);
+  .col-#{$i} {
+    position: relative;
+    flex-basis: percentage($i/$grid-cols);
+  }
+}
+
+// use mq
+@each $bp in map-keys($breakpoints) {
+  @include respond-up($bp) {
+    @for $i from 0 through $grid-cols {
+      .col-#{$i}\:#{$bp} {
+        position: relative;
+        flex-basis: percentage($i/$grid-cols);
+      }
     }
   }
 }
 
-.basis-100vw {
-  @include respond-classes {
-    flex-basis: 100vw;
+// col auto
+.col-auto {
+  position: relative;
+  flex-basis: auto;
+}
+
+// use mq
+@each $bp in map-keys($breakpoints) {
+  @include respond-up($bp) {
+    .col-auto\:#{$bp} {
+      position: relative;
+      flex-basis: auto;
+    }
   }
 }
 
-.basis-100vh {
-  @include respond-classes {
-    flex-basis: 100vh;
-  }
-}
-
-// Bootstrap
-.row {
-  display: flex;
-  flex-wrap: wrap;
+// Custom
+.flex-gutter {
   margin-right: ($grid-gutter / -2);
   margin-left: ($grid-gutter / -2);
 }
 
-@for $i from 0 through $grid-cols {
-  .col-#{$i} {
-    @include respond-classes {
-      position: relative;
-      padding-right: ($grid-gutter / 2);
-      padding-left: ($grid-gutter / 2);
-      min-height: 1px;
-      flex: 0 0 percentage($i/$grid-cols);
-      max-width: percentage($i/$grid-cols);
-    }
-  }
+.flex-gutter > div {
+  padding-right: ($grid-gutter / 2);
+  padding-left: ($grid-gutter / 2);
 }

@@ -10,6 +10,6 @@
 // custom
 .font {
   @include map($font-families, 'font-family');
-  @include map-respond-classes($font-sizes, 'font-size');
+  @include map-mq($font-sizes, 'font-size');
 }
 */

@@ -1,50 +1,50 @@
-$sizes: (
+$ranges: (
   milli: (
     min-size: 0.125rem,
     max-size: 0.25rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
   centi: (
     min-size: 0.25rem,
     max-size: 0.5rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
   deci: (
     min-size: 0.5rem,
     max-size: 1rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
   base: (
     min-size: 1rem,
     max-size: 2rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
   deca: (
     min-size: 2rem,
     max-size: 4rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
   hecto: (
     min-size: 4rem,
     max-size: 8rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
   kilo: (
     min-size: 8rem,
     max-size: 12rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
   mega: (
     min-size: 12rem,
     max-size: 16rem,
     min-vw: sm,
-    max-vw: xl,
+    max-vw: xx,
   ),
 );

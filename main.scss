@@ -14,10 +14,14 @@
 @import "base/tables";
 
 // Blocks
+@import "blocks/anims";
 @import "blocks/clear";
 @import "blocks/container";
 @import "blocks/flex";
 @import "blocks/img";
+@import "blocks/pseudo";
+@import "blocks/show";
+@import "blocks/wrap";
 
 // Comps
 @import "comps/wp-classes";

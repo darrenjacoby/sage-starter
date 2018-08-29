@@ -1,0 +1,19 @@
+.show-none {
+  display: none;
+}
+
+.show-block {
+  display: block;
+}
+
+@each $bp in map-keys($breakpoints) {
+  @include respond-up($bp) {
+    .show-none\:#{$bp} {
+      display: none;
+    }
+
+    .show-block\:#{$bp} {
+      display: block;
+    }
+  }
+}

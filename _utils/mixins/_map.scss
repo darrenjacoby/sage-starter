@@ -2,7 +2,7 @@
  * Output classes from values in a config map
  *
  * @requires mixins/fluid
- * @requires mixins/respond-classes
+ * @requires mixins/mq-classes
  *
  * @params $font-size
  * @params $config-map, $class-prefix, $css-prop
@@ -17,11 +17,11 @@
   }
 }
 
-// Map Respond Classes
-@mixin map-respond-classes($config-map, $css-prop) {
+// Map Including Media Queries
+@mixin map-mq($config-map, $css-prop) {
   @each $name, $val in $config-map {
     &-#{$name} {
-      @include respond-classes() {
+      @include mq-classes() {
         @include get-map($config-map, $css-prop, $name, $val);
       }
     }

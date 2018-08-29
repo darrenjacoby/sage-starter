@@ -17,7 +17,7 @@ This starter makes no assumptions on frontend frameworks, and only provides the 
 │   ├── _font-families.scss
 │   ├── _font-sizes.scss
 │   ├── _grid.scss
-│   ├── _sizes.scss
+│   ├── _ranges.scss
 │   └── _z-indexes.scss
 ├── _utils/
 │   ├── functions/
@@ -79,11 +79,11 @@ $breakpoints: (
 **Usage:**
 ```sass
 // media queries based on $breakpoints
-@include respond-up(sm) {}
-@include respond-down(lg) {}
+@include mq(sm) {}
+@include mq-down(lg) {}
 
 // custom media query
-@include respond-up(20rem) {]
+@include mq(20rem) {]
 ```
 
 ### Colors
@@ -183,17 +183,17 @@ font-family: get-font-family(primary);
 font-family: get-font-family(primary, bold);
 ```
 
-### Sizes
+### Ranges
 
 [Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid size within a specific range.
 
-**Config:** [`_config/_sizes.scss`](_config/_size.scss)
+**Config:** [`_config/_ranges.scss`](_config/_size.scss)
 
 The config key/values are the same used for font sizes.
 
-**For fluid size:**
+**For fluid range:**
 ```sass
-$sizes: (
+$ranges: (
   deca: (
     min-size: 2rem,
     max-size: 4rem,
@@ -204,9 +204,9 @@ $sizes: (
 )
 ```
 
-**For fixed size:**
+**For fixed range:**
 ```sass
-$sizes: (
+$ranges: (
   deca: (
     size: 2rem,
   ),
@@ -217,12 +217,12 @@ $sizes: (
 **Usage:**
 ```sass
 // default prop is margin-bottom
-@include size(deca);
+@include range(deca);
 
 // use a custom prop or props
-@include size(deca, padding-top padding-bottom);
+@include range(deca, padding-top padding-bottom);
 
-// get a single value from the $sizes map;
+// get a single value from the $ranges map;
 margin-bottom: get-size(deca); // returns the min-size value for key deca
 margin-bottom: get-size(deca, max); // returns the max-size value for key deca
 ```
@@ -263,14 +263,14 @@ It sets fluid values based on a min and max value between two breakpoints.
   @include map($font-families, 'font-family');
   // .font-primary
 
-  @include map-respond-classes($font-sizes, 'font-size');
+  @include map-mq($font-sizes, 'font-size');
   // .font-deca, font-deca:md, font-deca:lg, etc
 }
 
 
 // Append classes with screen sizes from $breakpoints
 .class-name {
-  @mixin respond-classes {
+  @mixin mq-classes {
     // .class-name, .class-name:md, .class-name:lg, etc
   }
 }

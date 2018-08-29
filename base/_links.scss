@@ -1,7 +1,7 @@
 /**
  * Links
  *
- * Recommended:
+ * @recommended
  * a:link, a:visited, a:hover, a:active
  */
 a {
@@ -17,6 +17,7 @@ a {
   }
 }
 
+// this can cause issues
 a:not([class]) {
   &,
   &:active,

@@ -1,0 +1,19 @@
+/**
+ * Output fluid range calcs from config $ranges
+ *
+ * @requires mixins/fluid
+ * @params $range
+ */
+@mixin range($range, $props: margin-bottom) {
+  $map: map-get($ranges, $range);
+
+  @if map-has-key($map, range) {
+    @each $prop in $props {
+      #{$prop}: range;
+    }
+  }
+
+  @else {
+    @include fluid($props, map-get($map, min-range), map-get($map, max-range), get-break(map-get($map, min-vw)), get-break(map-get($map, max-vw)));
+  }
+}
