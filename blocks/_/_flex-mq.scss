@@ -5,7 +5,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .flex\:#{$bp} {
       display: flex;
     }
@@ -22,7 +22,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .flex-row\:#{$bp} {
       flex-direction: row;
     }
@@ -47,7 +47,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .flex-wrap\:#{$bp} {
       flex-wrap: wrap;
     }
@@ -68,7 +68,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .align-items-start\:#{$bp} {
       align-items: flex-start;
     }
@@ -97,7 +97,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .justify-content-start\:#{$bp} {
       justify-content: flex-start;
     }
@@ -126,7 +126,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .align-content-start\:#{$bp} {
       align-content: flex-start;
     }
@@ -159,7 +159,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .order-before\:#{$bp} {
       order: -1;
     }
@@ -176,7 +176,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .align-self-center\:#{$bp} {
       align-self: center;
     }
@@ -204,7 +204,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .flex-initial\:#{$bp} {
       flex: 0 1 auto;
     }
@@ -224,7 +224,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     @for $i from 0 through $grid-cols {
       .flex-#{$i}\:#{$bp} {
         flex: #{$i};
@@ -238,7 +238,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     @for $i from 0 through $grid-cols {
       .grow-#{$i}\:#{$bp} {
         flex-grow: #{$i};
@@ -252,7 +252,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     @for $i from 0 through $grid-cols {
       .shrink-#{$i}\:#{$bp} {
         flex-shrink: #{$i};
@@ -266,7 +266,7 @@
 
 /*
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .basis-100vw\:#{$bp} {
       flex-basis: 100vw;
     }

@@ -123,7 +123,7 @@
 }
 
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .order-after\:#{$bp} {
       order: 1;
     }
@@ -210,7 +210,7 @@
 
 // use mq
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     @for $i from 0 through $grid-cols {
       .col-#{$i}\:#{$bp} {
         position: relative;
@@ -228,7 +228,7 @@
 
 // use mq
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .col-auto\:#{$bp} {
       position: relative;
       flex-basis: auto;

@@ -7,7 +7,7 @@
 }
 
 @each $bp in map-keys($breakpoints) {
-  @include respond-up($bp) {
+  @include mq($bp) {
     .show-none\:#{$bp} {
       display: none;
     }
