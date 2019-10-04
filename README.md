@@ -1,6 +1,6 @@
 # reusecss
 
-Config and utility driven proof of concept using Sass tools for highly reusable CSS.
+Config and utility driven proof of concept using [sass-tools](https://github.com/soberwp/sass-tools) for highly reusable CSS.
 
 ## Installation
 
