@@ -139,9 +139,9 @@ transition: color get-duration(slow) ease-in;
 
 Declare reusable CSS props and place them in `_utils/`. 
 
-* [`_utils/_layout.scss`](_config/_layout.scss)
-* [`_utils/_flex.scss`](_config/_flex.scss)
-* [`_utils/_sizing.scss`](_config/_sizing.scss)
+* [`_utils/_layout.scss`](_utils/_layout.scss)
+* [`_utils/_flex.scss`](_utils/_flex.scss)
+* [`_utils/_sizing.scss`](_utils/_sizing.scss)
 
 Head over to [sass-utils](https://github.com/soberwp/sass-utils) to learn more or to get some more [presets](https://github.com/soberwp/sass-utils).
 
