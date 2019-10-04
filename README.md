@@ -47,7 +47,6 @@ The only depedency is sass-tools which includes a few helpers to help with reusa
 │   ├── _media.scss
 │   ├── _tables.scss
 │   └── _text-formatting.scss
-├── # the rest of your css
 └── main.scss
 ```
 
@@ -60,7 +59,7 @@ Decalre simple variables and place them in `_config/`
 **Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
 
 **Usage:**
-```sass
+```scss
 @media (min-width: get-break(sm)) {}
 ```
 
@@ -69,7 +68,7 @@ Decalre simple variables and place them in `_config/`
 **Config:** [`_config/_colors.scss`](_config/_colors.scss)
 
 **Usage:**
-```sass
+```scss
 color: get-color(primary); // returns base by default
 color: get-color(primary, tone1);
 ```
@@ -81,7 +80,7 @@ color: get-color(primary, tone1);
 Create fluid font sizes using [sass-fs](https://github.com/soberwp/sass-fs) or get a fixed font size.
 
 **Usage:**
-```sass
+```scss
 // use a fluid font size from $font-sizes, downscaling using its ratio
 @include fs(xx);
 
@@ -98,7 +97,7 @@ For more usage options when using `@include fs()` head over to the [sass-fs docu
 Ratios are useful when working with `@include fs()` and `@include fl()`
 
 **Usage:**
-```sass
+```scss
 // fluid font size with ratio from $ratios
 @include fs(xx, get-ratio(lg));
 
@@ -114,7 +113,7 @@ Let's create a custom map and getter for transition durations.
 
 **`_config/_durations.scss`**
 
-```sass
+```scss
 $durations: (
   fast: 0.2s,
   base: 0.5s,
@@ -124,7 +123,7 @@ $durations: (
 
 **`_tools/_get-duration.scss`**
 
-```sass
+```scss
 @function get-duration($duration) {
   // pass in the map and key to function get()
   @return get($durations, $duration);
@@ -132,7 +131,7 @@ $durations: (
 ```
 
 **Usage:**
-```sass
+```scss
 transition: color get-duration(slow) ease-in;
 ```
 
@@ -147,7 +146,7 @@ Declare reusable CSS props and place them in `_utils/`.
 Head over to [sass-utils](https://github.com/soberwp/sass-utils) to learn more or to get some more [presets](https://github.com/soberwp/sass-utils).
 
 **Usage:**
-```sass
+```scss
 // include utility props in your class
 .flex-center {
   @include util(flex flex-wrap items-center justify-center);
@@ -156,7 +155,7 @@ Head over to [sass-utils](https://github.com/soberwp/sass-utils) to learn more o
 
 Build utility classes from utility maps. All utility classes are prefixed with breakpoints defined in `$breakpoints`.
 
-```sass
+```scss
 @include make-classes($utils);
 // creates classes flex sm:flex mq:flex lg:flex xl:flex, etc
 ```
