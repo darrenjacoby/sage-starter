@@ -16,7 +16,7 @@ Install sass-tools;
 $ yarn add @soberwp/sass-tools
 ```
 
-The only depedency is sass-tools which includes a few helpers to help with reusability.
+The only depedency is [sass-tools](https://github.com/soberwp/sass-tools) which includes a few basic helpers;
 
 * [sass-util](https://github.com/soberwp/sass-util)
 * [sass-get](https://github.com/soberwp/sass-get)
