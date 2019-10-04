@@ -1,0 +1,54 @@
+/**
+ * Text Formatting
+ *
+ * @recommended h1, h2, h3, h4, h5, h6, hgroup, a, em, small, strong, ins, del, mark, p, pre, code, blockquote, q, address, cite, time, mark,
+ */
+
+// standardise heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+// 1. reset link styles
+// 2. sized links
+// 3. remove the gray background on active links in ie10
+a {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none; // 1
+    color: inherit; // 1
+    outline: none; // 1
+    display: inline-block; // 2
+    background-color: transparent; // 3
+  }
+}
+
+// add spacing if p follows a p tag
+/*
+p + p {
+  margin-top: 1em; // 1
+}
+*/
+
+// remove blockquote quotes
+/*
+blockquote,
+q {
+  quotes: none;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+*/

@@ -1,9 +1,10 @@
 /**
  * Lists
  *
- * @recommended
- * dl, dt, dd, ol, ul, li
+ * @recommended dl, dt, dd, ol, ul, li
  */
+
+// remove bullets
 ol[class],
 ul[class] {
   list-style: none;

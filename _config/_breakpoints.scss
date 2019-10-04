@@ -1,7 +1,10 @@
 $breakpoints: (
-  sm: 36rem, // 576px
-  md: 48rem, // 768px
-  lg: 62rem, // 992px
-  xl: 75rem, // 1200px
-  xx: 87.5rem, // 1400px
+  sm: 36rem, // 576
+  md: 48rem, // 768
+  lg: 62rem, // 992
+  xl: 75rem, // 1200
+  xx: 87.5rem, // 1400
 );
+
+$fl-min-vw: "sm";
+$fl-max-vw: "xx";

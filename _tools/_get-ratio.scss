@@ -1,0 +1,8 @@
+/**
+ * Get Ratio
+ *
+ * @params $ratio
+ */
+@function get-ratio($ratio) {
+  @return get($ratios, $ratio);
+}

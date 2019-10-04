@@ -1,11 +1,13 @@
 /**
  * Tables
  *
- * @recommended
- * table, tbody, tfoot, thead, tr, th, td
+ * @recommended table, tbody, tfoot, thead, tr, th, td
  */
+
+// 1. force width 100%
+// 2. collapse border spacing
 table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
+  width: 100%; // 1
+  border-spacing: 0; // 2
+  border-collapse: collapse; // 2
 }

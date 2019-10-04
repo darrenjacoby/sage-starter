@@ -1,15 +1,20 @@
 /**
  * Media
  *
- * @recommended
- * img, audio, embed, source, track, video
+ * @recommended img, audio, embed, source, track, video
  */
+
+// 1. remove space after each image
+// 2. ensure responsive images
+// 3. remove the border on images inside links in ie10
 img {
-  max-width: 100%;
-  height: auto;
+  display: block; // 1
+  max-width: 100%; // 2
+  height: auto; // 2
+  border-style: none; // 3
 }
 
-// Chrome shows 1px border for images without src= which affects lazyloading
+// chrome shows 1px border for images without src=
 // https://stackoverflow.com/questions/6013071/removing-the-image-border-in-chrome-ie9
 img[src=''],
 img:not([src]) {

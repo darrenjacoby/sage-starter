@@ -1,65 +1,64 @@
-// https://www.modularscale.com/
-$leading: 1.5 !default;
-
+/**
+ * https://www.modularscale.com/
+ *
+ * 1.125 major second
+ * 1.25 major third
+ * 1.333 perfect fourth
+ * 1.5 perfect fifth
+ * 1.618 golden ratio
+ * 1.875 major seventh
+ * 2 octave
+ * 2.5 major tenth
+ * 3 major twelfth
+ * 4 double octave
+ */
 $font-sizes: (
-  milli: (
-    min-size: 10px,
-    max-size: 11px,
-    min-vw: sm,
-    max-vw: xx,
+  xs: (
+    size: 0.75rem, // 12
+    ratio: 1.125,
   ),
-  centi: (
-    min-size: 11px,
-    max-size: 12px,
-    min-vw: sm,
-    max-vw: xx,
-  ),
-  deci: (
-    min-size: 12px,
-    max-size: 14px,
-    min-vw: sm,
-    max-vw: xx,
+  sm: (
+    size: 0.875rem, // 14
+    ratio: 1.125,
   ),
   base: (
-    min-size: 14px,
-    max-size: 16px,
-    min-vw: sm,
-    max-vw: xx,
+    size: 1rem, // 16
+    ratio: 1.125,
   ),
-  deca: (
-    min-size: 16px,
-    max-size: 18px,
-    min-vw: sm,
-    max-vw: xx,
+  lg: (
+    size: 1.125rem, // 18
+    ratio: 1.125,
   ),
-  hecto: (
-    min-size: 18px,
-    max-size: 24px,
-    min-vw: sm,
-    max-vw: xx,
+  xl: (
+    size: 1.25rem, // 20
+    ratio: 1.125,
   ),
-  kilo: (
-    min-size: 24px,
-    max-size: 27px,
-    min-vw: sm,
-    max-vw: xx,
+  xx: (
+    size: 1.5rem, // 24
+    ratio: 1.25,
   ),
-  mega: (
-    min-size: 27px,
-    max-size: 36px,
-    min-vw: sm,
-    max-vw: xx,
+  xx1: (
+    size: 1.875rem, // 30
+    ratio: 1.333,
   ),
-  giga: (
-    min-size: 36px,
-    max-size: 42px,
-    min-vw: sm,
-    max-vw: xx,
+  xx2: (
+    size: 2.25rem, // 36
+    ratio: 1.333,
   ),
-  tera: (
-    min-size: 42px,
-    max-size: 64px,
-    min-vw: sm,
-    max-vw: xx,
+  xx3: (
+    size: 3rem, // 48
+    ratio: 1.618,
+  ),
+  xx4: (
+    size: 4rem, // 64
+    ratio: 1.618,
+  ),
+  xx5: (
+    size: 5rem, // 80
+    ratio: 1.618,
+  ),
+  xx6: (
+    size: 6rem, // 96
+    ratio: 1.875,
   ),
 );

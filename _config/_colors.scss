@@ -1,6 +1,6 @@
 $colors: (
   primary: (
-    base: hsl(157, 85%, 16%),
-    tone1: hsl(144, 19%, 44%),
+    base: hsl(157, 95%, 62%),
+    tone1: lighten(hsl(157, 95%, 62%), 10%),
   ),
 );

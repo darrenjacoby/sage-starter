@@ -1,277 +1,174 @@
-# sage/styles
+# reusecss
 
-Sass starter for longer lasting stylesheets with a single source of truth.
+Config and utility driven proof of concept using Sass tools for highly reusable CSS.
 
-Configuration is placed in Sass maps at the top of the project, functions/mixins are then used to retrieve those values in your comps, layouts and views. 
+## Installation
 
-This starter makes no assumptions on frontend frameworks, and only provides the config, utils and folder structure.
+Clone into your styles directory;
 
-## Structure
+```shell
+$ git clone https://github.com/soberwp/reusecss styles
+```
+
+Install sass-tools;
+
+```shell
+$ yarn add @soberwp/sass-tools
+```
+
+The only depedency is sass-tools which includes a few helpers to help with reusability.
+
+* [sass-util](https://github.com/soberwp/sass-util)
+* [sass-get](https://github.com/soberwp/sass-get)
+* [sass-fs](https://github.com/soberwp/sass-fs)
+* [sass-fl](https://github.com/soberwp/sass-fl)
+
+## Overview
 
 ```shell
 ├── _config/
 │   ├── _breakpoints.scss
 │   ├── _colors.scss
-│   ├── _durations.scss
 │   ├── _font-faces.scss
-│   ├── _font-families.scss
 │   ├── _font-sizes.scss
-│   ├── _grid.scss
-│   ├── _ranges.scss
-│   └── _z-indexes.scss
+│   └── _ratios.scss
+├── _tools/
+│   ├── _get-break.scss
+│   ├── _get-color.scss
+│   ├── _get-font-size.scss
+│   └── _get-ratio.scss
 ├── _utils/
-│   ├── functions/
-│   ├── mixins/
-│   ├── _functions.scss
-│   └── _mixins.scss
+│   ├── _display.scss
+│   └── _layout.scss
 ├── base/
 │   ├── _elements.scss
-│   ├── _formatting.scss
 │   ├── _forms.scss
-│   ├── _headings.scss
-│   ├── _links.scss
 │   ├── _lists.scss
 │   ├── _media.scss
-│   └── _tables.scss
-├── blocks/
-│   ├── _clear.scss
-│   ├── _container.scss
-│   ├── _flex.scss
-│   └── _img.scss
-├── comps/
-│   ├── _tinymce.scss
-│   └── _wp-classes.scss
-├── layouts/
-│   ├── _banner.scss
-│   └── _footer.scss
-├── views/
+│   ├── _tables.scss
+│   └── _text-formatting.scss
+├── # the rest of your css
 └── main.scss
 ```
 
-## Installation
+## Config
 
-Clone into your styles directory.
-
-```shell
-# @ example.com/site/web/app/themes/assets/
-$ git clone https://github.com/darrenjacoby/sage-styles styles
-```
-
-## Configuration & Usage
-
-Declare a reusable style guide using Sass maps, located in `_config/`
+Decalre simple variables and place them in `_config/`
 
 ### Breakpoints
 
 **Config:** [`_config/_breakpoints.scss`](_config/_breakpoints.scss)
 
-```sass
-$breakpoints: (
-  xs: 20rem,
-  sm: 36rem,
-  md: 48rem,
-  lg: 62rem,
-  xl: 75rem,
-  xx: 87.5rem,
-);
-```
-
 **Usage:**
 ```sass
-// media queries based on $breakpoints
-@include mq(sm) {}
-@include mq-down(lg) {}
-
-// custom media query
-@include mq(20rem) {]
+@media (min-width: get-break(sm)) {}
 ```
 
 ### Colors
 
 **Config:** [`_config/_colors.scss`](_config/_colors.scss)
 
-```sass
-$colors: (
-  primary: (
-    base: hsl(157, 85%, 16%),
-    tone1: hsl(144, 19%, 44%),
-  ),
-);
-```
-
 **Usage:**
 ```sass
-// function get-color(color, tone). 
-// excluding the tone param returns the base key
-color: get-color(primary);
-color: get-color(primary, dark);
-```
-
-### Durations
-
-**Config:** [`_config/_durations.scss`](_config/_durations.scss)
-
-```sass
-$durations: (
-  fast: 0.2s,
-  base: 0.4s,
-  slow: 0.6s,
-  slowx: 1s,
-);
-```
-
-**Usage:**
-```sass
-// get a value from the $durations map
-transition: color get-duration(slow) ease-in;
+color: get-color(primary); // returns base by default
+color: get-color(primary, tone1);
 ```
 
 ### Font sizes
 
-Fluid min and max font size values within a range, based on Mike Riethmuller's [precise control over responsive typography](https://madebymike.com.au/writing/precise-control-responsive-typography/)
-
 **Config:** [`_config/_font-sizes.scss`](_config/_font-sizes.scss)
 
-Each font-size key requires the following key/values;
-* `min-size` and `max-size`
-  * Sets the min and max font-size.
-* `min-vw` and `max-vw`
-  * Set the range for the type to fluidly respond within.
-  * The required params for `min-vw` and `max-vw` are breakpoint keys found in [`_breakpoints.scss`](_config/_breakpoints.scss).
-
-**For fluid type:**
-```sass
-$font-sizes: (
-  deca: (
-    min-size: 16px,
-    max-size: 18px,
-    min-vw: xs,
-    max-vw: xl,
-  ),
-  // ...
-)
-```
-
-**For fixed type:**
-```sass
-$font-sizes: (
-  deca: (
-    size: 16px,
-  ),
-  // ...
-)
-```
+Create fluid font sizes using [sass-fs](https://github.com/soberwp/sass-fs) or get a fixed font size.
 
 **Usage:**
 ```sass
-// get fluid font sizes from $font-sizes
-@include font-size(deca);
+// use a fluid font size from $font-sizes, downscaling using its ratio
+@include fs(xx);
 
-// get a single value from the $font-sizes
-font-size: get-font-size(deca) // returns the min-size value for key deca
-font-size: get-font-size(deca, max) // returns the max-size value for key deca
+// use a standard fixed font size from $font-size
+font-size: get-font-size(xx);
 ```
 
-### Font families
+For more usage options when using `@include fs()` head over to the [sass-fs documentation](https://github.com/soberwp/sass-fs).
 
-**Config:** [`_config/_font-families.scss`](_config/_font-families.scss)
+### Ratios
+
+**Config:** [`_config/_ratios.scss`](_config/_font-sizes.scss)
+
+Ratios are useful when working with `@include fs()` and `@include fl()`
 
 **Usage:**
 ```sass
-// get a value from the $font-families map
-font-family: get-font-family(primary);
-font-family: get-font-family(primary, bold);
+// fluid font size with ratio from $ratios
+@include fs(xx, get-ratio(lg));
+
+// fluid css prop with ratio from $ratios
+@include fl(margin-bottom, 2rem, get-ratio(lg));
 ```
 
-### Ranges
+For more usage options and to better understand `@include fl()` head over to the [sass-fl documentation](https://github.com/soberwp/sass-fs).
 
-[Mike Riethmuller's](https://madebymike.com.au/writing/precise-control-responsive-typography/) technique used for fluid type can also be used to create fluid size within a specific range.
+### Create your own custom maps
 
-**Config:** [`_config/_ranges.scss`](_config/_size.scss)
+Let's create a custom map and getter for transition durations.
 
-The config key/values are the same used for font sizes.
+**`_config/_durations.scss`**
 
-**For fluid range:**
 ```sass
-$ranges: (
-  deca: (
-    min-size: 2rem,
-    max-size: 4rem,
-    min-vw: sm,
-    max-vw: xl,
-  ),
-  // ...
-)
+$durations: (
+  fast: 0.2s,
+  base: 0.5s,
+  slow: 1s,
+);
 ```
 
-**For fixed range:**
+**`_tools/_get-duration.scss`**
+
 ```sass
-$ranges: (
-  deca: (
-    size: 2rem,
-  ),
-  // ...
-)
-```
-
-**Usage:**
-```sass
-// default prop is margin-bottom
-@include range(deca);
-
-// use a custom prop or props
-@include range(deca, padding-top padding-bottom);
-
-// get a single value from the $ranges map;
-margin-bottom: get-size(deca); // returns the min-size value for key deca
-margin-bottom: get-size(deca, max); // returns the max-size value for key deca
-```
-
-### Z-indexes
-
-**Config:** [`_config/_z-indexes.scss`](_config/_z-indexes.scss)
-
-**Usage:**
-```sass
-// get a value from the $z-indexes map
-z-index: get-z-index(classname);
-```
-
-### Fluid
-
-The fluid mixin can be used directly for better control (no config map required).
-
-It sets fluid values based on a min and max value between two breakpoints. 
-
-**Usage:**
-```sass
-@include fluid($props, $min-value, $max-value, $min-vw, $max-vw);
-
-// excluding $min-vw, $max-vw gets the default sm/xl values from $breakpoints
-@include fluid(margin-bottom, 1rem, 10rem);
-
-// for more control you can pass the values
-@include fluid(margin-bottom, 1rem, 10rem, get-break(lg), get-break(xx));
-```
-
-### Mixins
-
-**Usage:**
-```sass
-// Append map keys and values to class
-.font {
-  @include map($font-families, 'font-family');
-  // .font-primary
-
-  @include map-mq($font-sizes, 'font-size');
-  // .font-deca, font-deca:md, font-deca:lg, etc
-}
-
-
-// Append classes with screen sizes from $breakpoints
-.class-name {
-  @mixin mq-classes {
-    // .class-name, .class-name:md, .class-name:lg, etc
-  }
+@function get-duration($duration) {
+  // pass in the map and key to function get()
+  @return get($durations, $duration);
 }
 ```
+
+**Usage:**
+```sass
+transition: color get-duration(slow) ease-in;
+```
+
+## Utils
+
+Declare reusable CSS props and place them in `_utils/`. 
+
+* [`_utils/_layout.scss`](_config/_layout.scss)
+* [`_utils/_flex.scss`](_config/_flex.scss)
+* [`_utils/_sizing.scss`](_config/_sizing.scss)
+
+Head over to [sass-utils](https://github.com/soberwp/sass-utils) to learn more or to get some more [presets](https://github.com/soberwp/sass-utils).
+
+**Usage:**
+```sass
+// include utility props in your class
+.flex-center {
+  @include util(flex flex-wrap items-center justify-center);
+}
+```
+
+Build utility classes from utility maps. All utility classes are prefixed with breakpoints defined in `$breakpoints`.
+
+```sass
+@include make-classes($utils);
+// creates classes flex sm:flex mq:flex lg:flex xl:flex, etc
+```
+
+**Tip:** Create utility classes at the end of your main.scss in order to take preference over other classes.
+
+## Base
+
+Base has been inspired from well documented browser resets [normalisecss](https://github.com/necolas/normalize.css/) and [wipecss](https://github.com/danilowoz/wipe.css). Classes should not be defined under base.
+
+You can chose to remove this folder and add a reset library of your choice.
+
+## Over to you
+
+Using the above tools for reusability, create your components, layouts and templates.

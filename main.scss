@@ -1,32 +1,34 @@
-// Config / Deps / Utils
-@import "config";
-@import "deps";
-@import "utils";
+// yarn add sass-tools
+@import "~@soberwp/sass-tools";
 
-// Base
+// config
+@import "_config/breakpoints";
+@import "_config/colors";
+@import "_config/font-faces";
+@import "_config/font-sizes";
+@import "_config/ratios";
+
+// tools
+@import "_tools/get-break";
+@import "_tools/get-color";
+@import "_tools/get-font-size";
+@import "_tools/get-ratio";
+
+// utils
+@import "_utils/display";
+@import "_utils/layout";
+@import "_utils/sizing";
+
+// base
 @import "base/elements";
-@import "base/formatting";
 @import "base/forms";
-@import "base/headings";
-@import "base/links";
 @import "base/lists";
 @import "base/media";
 @import "base/tables";
+@import "base/text-formatting";
 
-// Blocks
-@import "blocks/anims";
-@import "blocks/clear";
-@import "blocks/container";
-@import "blocks/flex";
-@import "blocks/img";
-@import "blocks/pseudo";
-@import "blocks/show";
-@import "blocks/wrap";
+// your css folder structure
+// @recommended comps/, layouts/ and templates/
 
-// Comps
-@import "comps/wp-classes";
-@import "comps/tinymce";
-
-// Layouts
-@import "layouts/banner";
-@import "layouts/footer";
+// util-classes
+@import "util-classes";

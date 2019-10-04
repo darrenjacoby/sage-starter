@@ -1,25 +1,40 @@
 /**
  * Elements
  *
- * @recommended
- * article, aside, details, figcaption, figure, footer, header, hgroup, main, mark, menu, nav, section, summary, time
+ * @recommended article, aside, footer, header, main, menu, nav, section, summary, details, br, hr
  */
+
+// 1. reset
+// 2. inherit styles
+* {
+  margin: 0; // 1
+  padding: 0; // 1
+  border: 0; // 1
+  background-repeat: no-repeat; // 1
+  box-sizing: inherit; // 2
+}
+
+// 1. prevent certain mobile browsers from zooming fonts
+// 2. border box sizing
+// 3. smooth scroll
+// 4. prevent horizontal scroll
+// 5. tap color to remain transparent
 html {
   font-size: 100%;
-  -webkit-tap-highlight-color: transparent;
-  box-sizing: border-box;
+  -ms-text-size-adjust: 100%; // 1
+  -webkit-text-size-adjust: 100%; // 1
+  box-sizing: border-box; // 2
+  scroll-behavior: smooth; // 3
+  overflow-x: hidden; // 4
+  -webkit-tap-highlight-color: transparent; // 5
 }
 
-* {
-  &,
-  &::before,
-  &::after {
-    box-sizing: inherit;
-  }
-}
-
+// 1. efault font styles
+// 2. antialiased fonts
 body {
-  line-height: $leading;
-  font-size: 16px;
-  font-family: get-font-family(primary);
+  font-size: 16px; // 1
+  line-height: 1.5; // 1
+  font-family: System, sans-serif; // 1
+  -webkit-font-smoothing: antialiased; // 2
+  -moz-osx-font-smoothing: grayscale; // 2
 }

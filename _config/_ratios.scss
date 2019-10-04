@@ -1,0 +1,25 @@
+/**
+ * https://www.modularscale.com/
+ *
+ * 1.125 major second
+ * 1.25 major third
+ * 1.333 perfect fourth
+ * 1.5 perfect fifth
+ * 1.618 golden ratio
+ * 1.875 major seventh
+ * 2 octave
+ * 2.5 major tenth
+ * 3 major twelfth
+ * 4 double octave
+ */
+$ratios: (
+  xxs: 1.125,
+  xs: 1.25,
+  sm: 1.333,
+  md: 1.5,
+  lg: 1.618,
+  xl: 2,
+  xxl: 3,
+);
+
+$fl-ratio: 2;

@@ -1,0 +1,9 @@
+/**
+ * Get Font Size
+ *
+ * @params $duration
+ * @requires calc-rem() from sass-fl
+ */
+@function get-font-size($font-size, $size: "size") {
+  @return calc-rem(get($font-sizes, $font-size, $size));
+}
