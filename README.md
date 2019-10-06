@@ -56,6 +56,8 @@ Declare config maps and place them in `_config/`
 **Usage:**
 ```scss
 @media (min-width: get-break(sm)) {}
+// or
+@include mq(sm) {}
 ```
 
 ### Colors
@@ -132,7 +134,7 @@ Head over to [sass-tools/util](https://github.com/soberwp/sass-tools/.github/uti
 
 ## Base
 
-Base has been inspired from well documented browser resets [normalisecss](https://github.com/necolas/normalize.css/) and [wipecss](https://github.com/danilowoz/wipe.css). Classes should not be defined under base. You can chose to remove this folder and add a reset library of your choice.
+Base has been inspired from well documented browser resets [normalize.css](https://github.com/necolas/normalize.css/) and [wipe.css](https://github.com/danilowoz/wipe.css). You can chose to remove this folder and add a reset library of your choice.
 
 ## Over to you
 
