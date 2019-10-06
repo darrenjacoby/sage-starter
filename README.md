@@ -60,6 +60,8 @@ Declare config maps and place them in `_config/`
 @include mq(sm) {}
 ```
 
+For more usage options and to better understand `@include mq()` head over to [sass-tools/mq](https://github.com/soberwp/sass-tools/blob/master/.github/mq.md).
+
 ### Colors
 
 **Config:** [`_config/_colors.scss`](_config/_colors.scss)
@@ -74,7 +76,7 @@ color: get-color(primary, tone1);
 
 **Config:** [`_config/_font-sizes.scss`](_config/_font-sizes.scss)
 
-Create fluid font sizes using [sass-fs](https://github.com/soberwp/sass-fs) or get a fixed font size.
+Create fluid font sizes using [sass-fs](https://github.com/soberwp/sass-tools/blob/master/.github/fs.md) or get a fixed font size.
 
 **Usage:**
 ```scss
@@ -85,7 +87,7 @@ Create fluid font sizes using [sass-fs](https://github.com/soberwp/sass-fs) or g
 font-size: get-font-size(xx);
 ```
 
-For more usage options and to better understand `@include fs()` head over to [sass-tools/fs](https://github.com/soberwp/sass-tools/.github/fs).
+For more usage options and to better understand `@include fs()` head over to [sass-tools/fs](https://github.com/soberwp/sass-tools/blob/master/.github/fs.md).
 
 ### Ratios
 
@@ -102,7 +104,7 @@ Ratios are useful when working with `@include fs()` and `@include fl()`
 @include fl(margin-bottom, 2rem, get-ratio(lg));
 ```
 
-For more usage options and to better understand `@include fl()` head over to [sass-tools/fl](https://github.com/soberwp/sass-tools/.github/fl).
+For more usage options and to better understand `@include fl()` head over to [sass-tools/fl](https://github.com/soberwp/sass-tools/blob/master/.github/fl.md).
 
 ## Utils
 
@@ -130,7 +132,7 @@ Build utility classes from utility maps. All utility classes are prefixed with b
 
 **Tip:** Create utility classes at the end of your main.scss in order to take preference over other classes.
 
-Head over to [sass-tools/util](https://github.com/soberwp/sass-tools/.github/util.md) to learn more or get [more presets](https://github.com/soberwp/sass-tools/util-presets).
+Head over to [sass-tools/util](https://github.com/soberwp/sass-tools/blob/master/.github/util.md) to learn more or get [more presets](https://github.com/soberwp/sass-tools/tree/master/util-presets).
 
 ## Base
 
