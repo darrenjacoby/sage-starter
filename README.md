@@ -136,7 +136,9 @@ Head over to [sass-tools/util](https://github.com/soberwp/sass-tools/blob/master
 
 ## Base
 
-Base has been inspired from well documented browser resets [normalize.css](https://github.com/necolas/normalize.css/) and [wipe.css](https://github.com/danilowoz/wipe.css). You can chose to remove this folder and add a reset library of your choice.
+Base has been inspired from well documented browser resets [normalize.css](https://github.com/necolas/normalize.css/) and [wipe.css](https://github.com/danilowoz/wipe.css). 
+
+Alternatively, you can remove this folder and add a reset library of your choice.
 
 ## Over to you
 
