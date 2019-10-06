@@ -1,27 +1,20 @@
-# reusecss
+# sass-starter
 
-Config and utility driven proof of concept using [sass-tools](https://github.com/soberwp/sass-tools) for highly reusable CSS.
+Config and utility first framework powered using [sass-tools](https://github.com/soberwp/sass-tools).
 
 ## Installation
 
 Clone into your styles directory;
 
 ```shell
-$ git clone https://github.com/soberwp/reusecss styles
+$ git clone https://github.com/soberwp/sass-starter styles
 ```
 
-Install sass-tools;
+Install [sass-tools](https://github.com/soberwp/sass-tools);
 
 ```shell
 $ yarn add @soberwp/sass-tools
 ```
-
-The only depedency is [sass-tools](https://github.com/soberwp/sass-tools) which includes a few basic helpers;
-
-* [sass-util](https://github.com/soberwp/sass-util)
-* [sass-get](https://github.com/soberwp/sass-get)
-* [sass-fs](https://github.com/soberwp/sass-fs)
-* [sass-fl](https://github.com/soberwp/sass-fl)
 
 ## Overview
 
@@ -38,8 +31,10 @@ The only depedency is [sass-tools](https://github.com/soberwp/sass-tools) which 
 │   ├── _get-font-size.scss
 │   └── _get-ratio.scss
 ├── _utils/
-│   ├── _display.scss
-│   └── _layout.scss
+│   ├── _container.scss
+│   ├── _flex.scss
+│   ├── _layout.scss
+│   └── _sizing.scss
 ├── base/
 │   ├── _elements.scss
 │   ├── _forms.scss
@@ -52,7 +47,7 @@ The only depedency is [sass-tools](https://github.com/soberwp/sass-tools) which 
 
 ## Config
 
-Decalre simple variables and place them in `_config/`
+Declare config maps and place them in `_config/`
 
 ### Breakpoints
 
@@ -88,7 +83,7 @@ Create fluid font sizes using [sass-fs](https://github.com/soberwp/sass-fs) or g
 font-size: get-font-size(xx);
 ```
 
-For more usage options when using `@include fs()` head over to the [sass-fs documentation](https://github.com/soberwp/sass-fs).
+For more usage options and to better understand `@include fs()` head over to [sass-tools/fs](https://github.com/soberwp/sass-tools/.github/fs).
 
 ### Ratios
 
@@ -105,45 +100,16 @@ Ratios are useful when working with `@include fs()` and `@include fl()`
 @include fl(margin-bottom, 2rem, get-ratio(lg));
 ```
 
-For more usage options and to better understand `@include fl()` head over to the [sass-fl documentation](https://github.com/soberwp/sass-fs).
-
-### Create your own custom maps
-
-Let's create a custom map and getter for transition durations.
-
-**`_config/_durations.scss`**
-
-```scss
-$durations: (
-  fast: 0.2s,
-  base: 0.5s,
-  slow: 1s,
-);
-```
-
-**`_tools/_get-duration.scss`**
-
-```scss
-@function get-duration($duration) {
-  // pass in the map and key to function get()
-  @return get($durations, $duration);
-}
-```
-
-**Usage:**
-```scss
-transition: color get-duration(slow) ease-in;
-```
+For more usage options and to better understand `@include fl()` head over to [sass-tools/fl](https://github.com/soberwp/sass-tools/.github/fl).
 
 ## Utils
 
 Declare reusable CSS props and place them in `_utils/`. 
 
-* [`_utils/_layout.scss`](_utils/_layout.scss)
+* [`_utils/_container.scss`](_utils/_container.scss)
 * [`_utils/_flex.scss`](_utils/_flex.scss)
+* [`_utils/_layout.scss`](_utils/_layout.scss)
 * [`_utils/_sizing.scss`](_utils/_sizing.scss)
-
-Head over to [sass-utils](https://github.com/soberwp/sass-utils) to learn more or to get some more [presets](https://github.com/soberwp/sass-utils).
 
 **Usage:**
 ```scss
@@ -156,18 +122,18 @@ Head over to [sass-utils](https://github.com/soberwp/sass-utils) to learn more o
 Build utility classes from utility maps. All utility classes are prefixed with breakpoints defined in `$breakpoints`.
 
 ```scss
-@include make-classes($utils);
+@include make-classes();
 // creates classes flex sm:flex mq:flex lg:flex xl:flex, etc
 ```
 
 **Tip:** Create utility classes at the end of your main.scss in order to take preference over other classes.
 
+Head over to [sass-tools/util](https://github.com/soberwp/sass-tools/.github/util.md) to learn more or get [more presets](https://github.com/soberwp/sass-tools/util-presets).
+
 ## Base
 
-Base has been inspired from well documented browser resets [normalisecss](https://github.com/necolas/normalize.css/) and [wipecss](https://github.com/danilowoz/wipe.css). Classes should not be defined under base.
-
-You can chose to remove this folder and add a reset library of your choice.
+Base has been inspired from well documented browser resets [normalisecss](https://github.com/necolas/normalize.css/) and [wipecss](https://github.com/danilowoz/wipe.css). Classes should not be defined under base. You can chose to remove this folder and add a reset library of your choice.
 
 ## Over to you
 
-Using the above tools for reusability, create your components, layouts and templates.
+Using the above tools, build out your components, layouts and templates.

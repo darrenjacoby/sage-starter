@@ -4,5 +4,5 @@
  * @params $color, $tone
  */
 @function get-color($color, $tone: "base") {
-  @return get($colors, $color, $tone);
+  @return map-get(map-get($colors, $color), $tone);
 }

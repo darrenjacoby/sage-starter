@@ -4,5 +4,5 @@
  * @params $ratio
  */
 @function get-ratio($ratio) {
-  @return get($ratios, $ratio);
+  @return map-get($ratios, $ratio);
 }

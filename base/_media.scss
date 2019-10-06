@@ -16,7 +16,7 @@ img {
 
 // chrome shows 1px border for images without src=
 // https://stackoverflow.com/questions/6013071/removing-the-image-border-in-chrome-ie9
-img[src=''],
+img[src=""],
 img:not([src]) {
   opacity: 0;
 }

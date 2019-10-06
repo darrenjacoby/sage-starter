@@ -10,22 +10,17 @@ input,
 optgroup,
 select,
 textarea {
-  &,
-  &:active,
-  &:focus,
-  &:hover {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    overflow: visible;
-    border: 0;
-    outline: 0;
-    font: inherit;
-    -webkit-font-smoothing: inherit;
-    letter-spacing: inherit;
-    background: none;
-    vertical-align: top;
-  }
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: visible;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  vertical-align: top;
 }
 
 // avoid no background on edge and ie 
