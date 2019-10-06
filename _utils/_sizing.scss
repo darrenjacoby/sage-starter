@@ -1,4 +1,4 @@
-$utils: (
+$sizing: (
   // width
   w-auto: (width: auto),
   w-1\/2: (width: 50%),
@@ -46,4 +46,4 @@ $utils: (
   max-h-screen: (max-height: 100vh),
 );
 
-@include util-add($utils);
+@include util-add($sizing);

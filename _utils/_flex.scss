@@ -1,4 +1,4 @@
-$utils: (
+$flex: (
   // flex-direction
   flex-row: (flex-direction: row),
   flex-row-reverse: (flex-direction: row-reverse),
@@ -48,4 +48,4 @@ $utils: (
   order-last: (order: 9999),
 );
 
-@include util-add($utils);
+@include util-add($flex);
