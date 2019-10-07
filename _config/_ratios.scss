@@ -19,8 +19,8 @@ $ratios: (
   md: 1.5,
   lg: 1.618,
   xl: 2,
-  xxl: 3,
+  xx: 3,
 );
 
-// req for github.com/soberwp/sass-tools/fl
-$fl-ratio: 2;
+// req for sass-tools fl()
+$fl-ratio: 1.618;
