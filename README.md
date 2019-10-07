@@ -1,6 +1,6 @@
 # sass-starter
 
-Config and utility first barebones starter powered using [sass-tools](https://github.com/soberwp/sass-tools).
+Config and utility first starter powered using [sass-tools](https://github.com/soberwp/sass-tools).
 
 ## Installation
 
