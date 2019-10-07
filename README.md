@@ -54,8 +54,6 @@ Declare config maps and place them in `_config/`
 
 **Usage:**
 ```scss
-@media (min-width: get-break(sm)) {}
-// or
 @include mq(sm) {}
 ```
 
@@ -67,7 +65,7 @@ For more usage options and to better understand `@include mq()` head over to [sa
 
 **Usage:**
 ```scss
-color: get-color(primary); // returns base by default
+color: get-color(primary); // returns base
 color: get-color(primary, tone1);
 ```
 
@@ -109,7 +107,6 @@ For more usage options and to better understand `@include fl()` head over to [sa
 
 Declare reusable CSS props and place them in `_utils/`. 
 
-* [`_utils/_container.scss`](_utils/_container.scss)
 * [`_utils/_flex.scss`](_utils/_flex.scss)
 * [`_utils/_layout.scss`](_utils/_layout.scss)
 * [`_utils/_sizing.scss`](_utils/_sizing.scss)
