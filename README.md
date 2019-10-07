@@ -128,7 +128,7 @@ Build utility classes from utility maps. All utility classes are prefixed with b
 
 **Tip:** Create utility classes at the end of your main.scss in order to take preference over other classes.
 
-Head over to [sass-tools/util](https://github.com/soberwp/sass-tools/blob/master/.github/util.md) to learn more or get [more presets](https://github.com/soberwp/sass-tools/tree/master/util-presets).
+For more usage options head over to [sass-tools/util](https://github.com/soberwp/sass-tools/blob/master/.github/util.md) or get [more utility presets](https://github.com/soberwp/sass-tools/tree/master/util-presets).
 
 ## Base
 
