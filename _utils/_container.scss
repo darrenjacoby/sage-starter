@@ -1,8 +1,0 @@
-$container: (
-  container: (
-    width: 87.5rem,
-    max-width: 82.5%,
-  ),
-);
-
-@include util-add($container);
