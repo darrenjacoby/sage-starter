@@ -1,4 +1,4 @@
-# starter-sage-x
+# starter-sage
 
 Starter for [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev) removing jQuery and replacing Bootstrap and Sass with Tailwind and PostCSS plugins.
 
@@ -14,7 +14,7 @@ Starter for [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev) removing jQ
 ### Installation
 
 ```shell
-$ git clone https://github.com/soberwp/starter-sage-x starter-sage-x
+$ git clone https://github.com/soberwp/starter-sage starter-sage
 ```
 
 **Replace:**
@@ -45,6 +45,6 @@ require('postcss-root-parse-var'),
 require('postcss-range-value')({ screenMin: '48rem', screenMax: '100rem' }),
 ```
 
-Uncomment and review utilities under [resources/styles/_utils/fl-text.css](https://github.com/soberwp/starter-sage-x/blob/master/resources/styles/_utils/fl-text.css)
+Uncomment and review utilities under [resources/styles/_utils/fl-text.css](https://github.com/soberwp/starter-sage/blob/master/resources/styles/_utils/fl-text.css)
 
 Now you can use fluid type using a utility class like `fl:text-xl`.
