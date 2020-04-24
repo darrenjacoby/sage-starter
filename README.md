@@ -31,7 +31,7 @@ $ yarn remove jquery bootstrap popper.js sass sass-loader
 $ yarn add tailwindcss postcss-import postcss-preset-env
 ```
 
-### Bonus!
+### Optional
 
 Fluid type is common for font sizes. Tailwind does not offer this out the box, but you can add support using [postcss-range-value](https://github.com/soberwp/postcss-range-value)
 
