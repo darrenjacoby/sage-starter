@@ -1,0 +1,7 @@
+:root {
+  --screen-sm: theme(sm);
+  --screen-md: theme(md);
+  --screen-lg: theme(lg);
+  --screen-xl: theme(xl);
+  --screen-xx: theme(xx);
+}

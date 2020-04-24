@@ -1,0 +1,35 @@
+/**
+ * yarn add tailwindcss
+ */
+
+/**
+ * Custom Properties
+ */
+@import "_config/colors";
+@import "_config/font-faces";
+@import "_config/font-sizes";
+@import "_config/ratios";
+@import "_config/screen";
+
+/**
+ * Base
+ */
+@import "tailwindcss/base";
+
+/*! purgecss start ignore */
+
+@import "base/elements";
+@import "base/forms";
+@import "base/lists";
+@import "base/media";
+@import "base/tables";
+@import "base/text-formatting";
+
+/*! purgecss end ignore */
+
+/**
+ * Utils
+ */
+@import "tailwindcss/utilities";
+@import "_utils/fl-h";
+@import "_utils/fl-text";

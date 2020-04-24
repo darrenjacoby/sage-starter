@@ -1,0 +1,43 @@
+/**
+ * Optional: Fluid Heights
+ *
+ * yarn add postcss-range-value postcss-root-parse-var 
+ */
+
+/*
+.fl\:h-4 {
+  height: range(parse-var(--ratio-lg), 1rem);
+}
+
+.fl\:h-8 {
+  height: range(parse-var(--ratio-lg), 2rem);
+}
+
+.fl\:h-12 {
+  height: range(parse-var(--ratio-lg), 3rem);
+}
+
+.fl\:h-16 {
+  height: range(parse-var(--ratio-lg), 4rem);
+}
+
+.fl\:h-20 {
+  height: range(parse-var(--ratio-lg), 5rem);
+}
+
+.fl\:h-24 {
+  height: range(parse-var(--ratio-lg), 6rem);
+}
+
+.fl\:h-32 {
+  height: range(parse-var(--ratio-lg), 8rem);
+}
+
+.fl\:h-40 {
+  height: range(parse-var(--ratio-lg), 10rem);
+}
+
+.fl\:h-48 {
+  height: range(parse-var(--ratio-lg), 12rem);
+}
+*/

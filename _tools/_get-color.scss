@@ -1,8 +1,0 @@
-/**
- * Get Color
- *
- * @params $color, $tone
- */
-@function get-color($color, $tone: "base") {
-  @return map-get(map-get($colors, $color), $tone);
-}

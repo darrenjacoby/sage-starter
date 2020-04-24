@@ -1,0 +1,55 @@
+/**
+ * Optional: Fluid Type
+ *
+ * yarn add postcss-range-value postcss-root-parse-var 
+ */
+
+ /*
+.fl\:text-xs {
+  font-size: range(parse-var(--ratio-xs), 0.75rem);
+}
+
+.fl\:text-sm {
+  font-size: range(parse-var(--ratio-xs), 0.875rem);
+}
+
+.fl\:text-base {
+  font-size: range(parse-var(--ratio-xs), 1rem);
+}
+
+.fl\:text-lg {
+  font-size: range(parse-var(--ratio-xs), 1.125rem);
+}
+
+.fl\:text-xl {
+  font-size: range(parse-var(--ratio-xs), 1.25rem);
+}
+
+.fl\:text-2xl {
+  font-size: range(parse-var(--ratio-sm), 1.5rem);
+}
+
+.fl\:text-3xl {
+  font-size: range(parse-var(--ratio-sm), 1.875rem);
+}
+
+.fl\:text-4xl {
+  font-size: range(parse-var(--ratio-sm), 2.25rem);
+}
+
+.fl\:text-5xl {
+  font-size: range(parse-var(--ratio-md), 3rem);
+}
+
+.fl\:text-6xl {
+  font-size: range(parse-var(--ratio-md), 4rem);
+}
+
+.fl\:text-7xl {
+  font-size: range(parse-var(--ratio-md), 6rem);
+}
+
+.fl\:text-8xl {
+  font-size: range(parse-var(--ratio-lg), 8rem);
+}
+*/

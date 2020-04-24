@@ -1,0 +1,11 @@
+/**
+ * https://www.modularscale.com/
+ */
+:root {
+  --ratio-xs: 1.125;
+  --ratio-sm: 1.333;
+  --ratio-md: 1.5;
+  --ratio-lg: 1.618;
+  --ratio-xl: 2;
+  --ratio-xx: 3;
+}

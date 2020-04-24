@@ -1,8 +1,0 @@
-/**
- * Get Break
- *
- * @params $breakpoint
- */
-@function get-break($breakpoint) {
-  @return map-get($breakpoints, $breakpoint);
-}

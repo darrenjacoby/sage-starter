@@ -1,8 +1,0 @@
-/**
- * Get Ratio
- *
- * @params $ratio
- */
-@function get-ratio($ratio) {
-  @return map-get($ratios, $ratio);
-}
