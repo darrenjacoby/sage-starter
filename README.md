@@ -41,12 +41,12 @@ Fluid type is common for font sizes. Tailwind does not offer this out the box, b
 $ yarn add postcss-range-value postcss-root-parse-var
 ```
 
-Remove comments under `webpack.mix.js` for the below;
+Uncomment the following under `webpack.mix.js`;
 ```js
 require('postcss-root-parse-var'),
 require('postcss-range-value')({ screenMin: '48rem', screenMax: '100rem' }),
 ```
 
-Remove comments and review utilities under [resources/styles/_utils/fl-text.css](https://github.com/soberwp/starter-sage-x/blob/master/resources/styles/_utils/fl-text.css)
+Uncomment and review utilities under [resources/styles/_utils/fl-text.css](https://github.com/soberwp/starter-sage-x/blob/master/resources/styles/_utils/fl-text.css)
 
 Now you can use fluid type using a utility class like `fl:text-xl`.
