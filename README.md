@@ -1,8 +1,6 @@
 # starter-sage-x
 
-Starter for [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev) that removes Sass, Bootstrap and jQuery.
-
-Sass is replaced with [PostCSS](https://postcss.org/). 
+Starter for [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev) that replaces jQuery, Sass and Bootstrap with Tailwind and PostCSS plugins.
 
 ### Dependencies
 
