@@ -1,9 +1,5 @@
 /**
- * yarn add tailwindcss
- */
-
-/**
- * Custom Properties
+ * Config
  */
 @import "_config/colors";
 @import "_config/font-faces";
