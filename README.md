@@ -7,7 +7,7 @@ Starter for [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev) removing jQ
 * [tailwindcss](https://tailwindcss.com/)
   * PostCSS utility first CSS framework
 * [postcss-present-env](https://preset-env.cssdb.org/)
-  * PostCSS preset env converts modern CSS into something most browsers can understand, determine polyfills based on targeted browsers or runtime environments
+  * PostCSS preset env converts modern CSS into something most browsers can understand
 * [postcss-import](https://github.com/postcss/postcss-import)
   * PostCSS import allows for `@import`
 
