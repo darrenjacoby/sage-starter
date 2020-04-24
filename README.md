@@ -19,7 +19,7 @@ Sass is replaced with [PostCSS](https://postcss.org/).
 $ git clone https://github.com/soberwp/starter-sage-x starter-sage-x
 ```
 
-**Files and folders to replace:**
+**Replace:**
   * `resources/styles/*`
   * `resources/scripts/app.js`
   * `tailwind.js`
