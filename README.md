@@ -16,8 +16,14 @@ Sass is replaced with [PostCSS](https://postcss.org/).
 ### Installation
 
 ```shell
-$ git clone https://github.com/soberwp/starter-sage-x theme-folder
+$ git clone https://github.com/soberwp/starter-sage-x starter-sage-x
 ```
+
+**Files and folders to replace:**
+  * `resources/styles/*`
+  * `resources/scripts/app.js`
+  * `tailwind.js`
+  * `webpack.min.js`
 
 ```shell
 $ yarn remove jquery bootstrap popper.js sass sass-loader
