@@ -4,7 +4,7 @@ module.exports = {
       sm: '36rem',
       md: '48rem',
       lg: '62rem',
-      xl: '87.5rem',
+      xl: '80rem',
       xx: '100rem',
     },
   },
