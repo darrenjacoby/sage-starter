@@ -47,6 +47,6 @@ require('postcss-root-parse-var'),
 require('postcss-range-value')({ screenMin: '48rem', screenMax: '100rem' }),
 ```
 
-Remove comments and review utilities under [resources/styles/_utils/fl-text.css]()
+Remove comments and review utilities under [resources/styles/_utils/fl-text.css](https://github.com/soberwp/starter-sage-x/blob/master/resources/styles/_utils/fl-text.css)
 
 Now you can use fluid type using a utility class like `fl:text-xl`.
