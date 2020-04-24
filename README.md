@@ -6,7 +6,7 @@ Sass is replaced with [PostCSS](https://postcss.org/).
 
 ### Dependencies
 
-* [Tailwindcss](https://tailwindcss.com/)
+* [tailwindcss](https://tailwindcss.com/)
   * PostCSS utility first CSS framework
 * [postcss-present-env](https://preset-env.cssdb.org/)
   * PostCSS preset env converts modern CSS into something most browsers can understand, determine polyfills based on targeted browsers or runtime environments
