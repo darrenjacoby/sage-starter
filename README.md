@@ -9,7 +9,7 @@ Starter for [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev) removing jQ
 * [postcss-present-env](https://preset-env.cssdb.org/)
   * PostCSS preset env converts modern CSS into something most browsers can understand
 * [postcss-import](https://github.com/postcss/postcss-import)
-  * PostCSS import allows for `@import`
+  * PostCSS import allows for the use of `@import`
 
 ### Installation
 
@@ -21,7 +21,7 @@ $ git clone https://github.com/soberwp/starter-sage starter-sage
   * `resources/styles/*`
   * `resources/scripts/app.js`
   * `tailwind.js`
-  * `webpack.min.js`
+  * `webpack.mix.js`
 
 ```shell
 $ yarn remove jquery bootstrap popper.js sass sass-loader
