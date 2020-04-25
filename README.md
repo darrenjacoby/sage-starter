@@ -36,7 +36,7 @@ $ yarn add tailwindcss postcss-import postcss-preset-env
 Fluid type is common for font sizes. Tailwind does not offer this out the box, but you can add support using [postcss-range-value](https://github.com/soberwp/postcss-range-value)
 
 ```shell
-$ yarn add postcss-range-value postcss-root-parse-var
+$ yarn add postcss-range-value
 ```
 
 Uncomment the following under `webpack.mix.js`;

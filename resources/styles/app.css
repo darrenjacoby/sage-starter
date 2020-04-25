@@ -1,11 +1,7 @@
 /**
  * Config
  */
-@import "_config/colors";
 @import "_config/font-faces";
-@import "_config/font-sizes";
-@import "_config/ratios";
-@import "_config/screen";
 
 /**
  * Base

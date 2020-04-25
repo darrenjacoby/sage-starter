@@ -1,55 +1,52 @@
 /**
  * Optional: Fluid Type
  *
- * $ yarn add postcss-range-value postcss-root-parse-var 
+ * $ yarn add postcss-range-value
  */
-
- /*
 .fl\:text-xs {
-  font-size: range(parse-var(--ratio-xs), parse-var(--font-size-xs));
+  font-size: range(theme("ratio.xs"), theme("fontSize.xs"));
 }
 
 .fl\:text-sm {
-  font-size: range(parse-var(--ratio-xs), parse-var(--font-size-sm));
+  font-size: range(theme("ratio.xs"), theme("fontSize.sm"));
 }
 
 .fl\:text-base {
-  font-size: range(parse-var(--ratio-xs), parse-var(--font-size-base));
+  font-size: range(theme("ratio.xs"), theme("fontSize.base"));
 }
 
 .fl\:text-lg {
-  font-size: range(parse-var(--ratio-xs), parse-var(--font-size-lg));
+  font-size: range(theme("ratio.xs"), theme("fontSize.lg"));
 }
 
 .fl\:text-xl {
-  font-size: range(parse-var(--ratio-xs), parse-var(--font-size-xl));
+  font-size: range(theme("ratio.xs"), theme("fontSize.xl"));
 }
 
 .fl\:text-2xl {
-  font-size: range(parse-var(--ratio-sm), parse-var(--font-size-2xl));
+  font-size: range(theme("ratio.sm"), theme("fontSize.2xl"));
 }
 
 .fl\:text-3xl {
-  font-size: range(parse-var(--ratio-sm), parse-var(--font-size-3xl));
+  font-size: range(theme("ratio.sm"), theme("fontSize.3xl"));
 }
 
 .fl\:text-4xl {
-  font-size: range(parse-var(--ratio-sm), parse-var(--font-size-4xl));
+  font-size: range(theme("ratio.sm"), theme("fontSize.4xl"));
 }
 
 .fl\:text-5xl {
-  font-size: range(parse-var(--ratio-md), parse-var(--font-size-5xl));
+  font-size: range(theme("ratio.md"), theme("fontSize.5xl"));
 }
 
 .fl\:text-6xl {
-  font-size: range(parse-var(--ratio-md), parse-var(--font-size-6xl));
+  font-size: range(theme("ratio.md"), theme("fontSize.6xl"));
 }
 
 .fl\:text-7xl {
-  font-size: range(parse-var(--ratio-md), parse-var(--font-size-7xl));
+  font-size: range(theme("ratio.md"), theme("fontSize.7xl"));
 }
 
 .fl\:text-8xl {
-  font-size: range(parse-var(--ratio-lg), parse-var(--font-size-8xl));
+  font-size: range(theme("ratio.lg"), theme("fontSize.8xl"));
 }
-*/
