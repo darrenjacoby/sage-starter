@@ -31,7 +31,7 @@ module.exports = {
       'lg': 1.618,
       'xl': 2,
       '2xl': 3,
-    }
+    },
   },
   variants: {},
   plugins: [],

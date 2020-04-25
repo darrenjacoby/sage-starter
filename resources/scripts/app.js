@@ -1,5 +1,3 @@
-import domReady from '@wordpress/dom-ready';
- 
-domReady(() => {
+document.addEventListener('DOMContentLoaded', () => {
   // console.log('Hello world');
 });
