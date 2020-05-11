@@ -16,7 +16,7 @@ Starter for [Sage 10](https://github.com/roots/sage/tree/10.0.0-dev) removing jQ
 ### Installation
 
 ```shell
-$ git clone https://github.com/soberwp/starter-sage starter-sage
+$ git clone https://github.com/soberwp/sage-starter sage-starter
 ```
 
 **Replace:**
