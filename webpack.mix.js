@@ -25,10 +25,6 @@ mix
       require('postcss-import'),
       require('tailwindcss'),
       require('postcss-preset-env')({ stage: 1 }),
-      /*
-      require('postcss-root-parse-var'),
-      require('postcss-range-value')({ screenMin: '48rem', screenMax: '100rem' }),
-      */
     ],
   })
   .purgeCss({

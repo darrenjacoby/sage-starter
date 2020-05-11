@@ -8,7 +8,7 @@ module.exports = {
       '2xl': '100rem',
     },
     colors: {
-      'primary': 'hsl(260, 100%, 50%)',
+      'primary': 'hsl(260 100% 50%)',
     },
     fontSize: {
       'xs': '.75rem',
@@ -34,5 +34,14 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('tailwindcss-fl')({
+      defaultRatio: 1.618,
+      screenMin: 'screens.sm',
+      screenMax: 'screens.xl',
+      theme: {
+        /* config */
+      }
+    }),
+  ],
 }
