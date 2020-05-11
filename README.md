@@ -22,7 +22,7 @@ $ git clone https://github.com/soberwp/sage-starter sage-starter
 **Replace:**
   * `resources/styles/*`
   * `resources/scripts/app.js`
-  * `tailwind.js`
+  * `tailwind.config.js`
   * `webpack.mix.js`
 
 ```shell
